@@ -1,0 +1,121 @@
+/*HEADER*/
+
+@media (max-width:960px), (max-device-width:960px) {
+
+    .header-top{
+        margin-top: 15px;
+        justify-content:space-around;
+    }
+
+    header img{
+        top:80%;
+    }
+}
+
+@media (max-width:650px), (max-device-width:650px) {
+
+    nav{
+        display: none;
+        position: absolute;
+        top: 90px;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 172px;
+    }
+
+    nav a{
+        font-size: 20px;
+    }
+
+    nav a:hover{
+        border: none;
+    }
+
+    .nav-mobile{
+        display: flex;
+        height: 25px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav-mobile div{
+        width: 30px;
+        height: 5px;
+        background: #fff;
+    }
+
+    header h1{
+        font-size: 40px;
+        margin-top: 65px;
+        padding: 0px 15px;
+    }
+
+    header h2{
+        font-size: 18px;
+
+    }
+}
+
+/*WHATIDo*/
+@media (max-width:930px),(max-device-width:930px) {
+    .whatIDo-item{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .whatIDo-item-image{
+        width: 290px;
+        height: 180px;
+        margin: auto;
+    }
+
+    .whatIDo-item-text{
+        margin: auto;
+    }
+}
+
+/*PORTFOLIO*/
+@media (max-width:980px),(max-device-width:980px) {
+
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(6,1fr);
+    }
+
+    .portfolio-container-mainItem {
+        width: 90%;
+        margin: auto;
+        grid-row: 2 / span 2;
+        grid-column: 1 / span 2;
+    }
+
+    .portfolio-item{
+        width: 100%;
+    }
+
+}
+
+@media (max-width:530px),(max-device-width:530px) {
+    .portfolio-item{
+        width: 90%;
+    }
+}
+
+/*SKILLS*/
+@media (max-width:769px),(max-device-width:769px) {
+    .skills{
+        background: #f5f5f5;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+
+    .skills h2{
+        margin-bottom: 32px;
+    }
+
+    .skills h3{
+        margin-bottom: 50px;
+    }
+
+}
