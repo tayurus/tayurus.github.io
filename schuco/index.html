@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebSite</title>
+    <!-- for old browser's support HTML5 -->
+    <script type="text/javascript" src="js/html5shiv-printshiv.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+</head>
+
+<body>
+    <!-- MOBILE MENU -->
+    <div class="menu">
+        <div class="menu__bg" data-menu-close=""></div>
+        <div class="menu__box">
+            <a href="#" class="menu__close" data-menu-close=""></a>
+            <ul class="menu">
+                <li class="first leaf"><a href="/" class="active">Главная</a></li>
+                <li class="first leaf"><a href="/" class="active">О компании</a></li>
+                <li class="first leaf"><a href="/" class="active">Архитекторам/Дизайнерам</a></li>
+                <li class="first leaf"><a href="/" class="active">Продукты</a></li>
+                <li class="first leaf"><a href="/" class="active">Объекты</a></li>
+                <li class="first leaf"><a href="/" class="active">Новости</a></li>
+                <li class="first leaf"><a href="/" class="active">Контакты</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-row">
+            <div class="header-b1">
+                <a href="#">
+                        <img src="img/logo.png" width="170" height="29" alt="Schüco">
+                    </a>
+                <span class="tagline">слоган справа от логотипа</span>
+            </div>
+
+            <div class="header-b2">
+                <a href="#" class="showRoom">
+                        Наш шоурум
+                    </a>
+
+                <a class="header-phone" href="callto:+74959375237">8 (495) 937-52-37</a>
+
+            </div>
+        </div>
+
+        <div class="header-row">
+            <nav>
+                <ul class="header-menu">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Архитекторам/Дизайнерам</a></li>
+                    <li><a href="#">Продукты</a></li>
+                    <li><a href="#">Объекты</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-menu-mobile" data-menu-open="">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <button class="callBtn">Заказать звонок</button>
+        </div>
+
+        <h2>Жизнь в окружении Schüco</h2>
+        <h1>Энергоэффективность. Удобство в обращении. Безопасность.</h1>
+        <button class="callBtn-mobile">Заказать звонок</button>
+
+        <img class="down" src='img/down.png' alt="Вниз">
+
+    </header>
+    <main>
+        <!-- PRODUCTS -->
+        <section class="products">
+            <img class="products-icon" src="img/products.png" alt="Наши товары">
+            <h2>Что мы представляем</h2>
+
+            <div class="products-container">
+
+                <div class="products-container-item">
+                    <img src="img/windows.png" alt="Окна">
+                    <h3>Окна</h3>
+                    <h5>Экономия энергии и расходов</h5>
+                </div>
+
+                <div class="products-container-other">
+
+                    <!-- row1 -->
+                    <div class="products-other-row">
+                        <div class="products-other-item">
+                            <img src="img/door1.png" alt="Входные двери">
+                            <h3>Входные двери</h3>
+                            <h5>Расставьте индивидуальные акценты</h5>
+                        </div>
+
+                        <div class="products-other-item">
+                            <img src="img/door2.png" alt="Раздвижные двери">
+                            <h3>Раздвижные двери</h3>
+                            <h5>Идеи для создания жилых домов</h5>
+                        </div>
+                    </div>
+
+                    <!-- row2 -->
+                    <div class="products-other-row">
+                        <div class="products-other-item">
+                            <img src="img/garden.png" alt="Зимние сады">
+                            <h3>Зимние сады</h3>
+                            <h5>Больше, чем просто полезная площадь</h5>
+                        </div>
+
+                        <div class="products-other-item">
+                            <img src="img/balcony.png" alt="Балконы">
+                            <h3>Балконы</h3>
+                            <h5>Пространство на свежем воздухе</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <form class="products-form" action="index.html" method="get">
+                <div class="products-form-row">
+                    <h3>У вас есть вопрос? <br> А у нас есть ответ!</h3>
+                    <div class="products-form-inputs">
+                        <input type="text" name="name" value="" placeholder="Укажите ваше имя" required>
+                        <input type="tel" name="phone" value="" placeholder="Ваш номер телефона" required>
+                    </div>
+
+                </div>
+
+                <div class="products-form-row">
+                    <span>Заполните поля и мы свяжемся с вами <br> в течение 15 минут</span>
+                    <input type="submit" name="submit" value="Отправить">
+                </div>
+
+
+            </form>
+
+        </section>
+
+        <!-- INFO -->
+        <section class="info">
+            <img class="info-icon" src="img/info.png" alt="Информация">
+            <h2>Немного информации о нас</h2>
+
+            <div class="info-container">
+                <div class="info-container-item">
+                    <img src="img/info1.png" alt="">
+                    <span>С числом сотрудников порядка 4.630 человек и 12.000 партнерских предприятий компания представлена в более, чем 80 странах мира.</span>
+                </div>
+
+                <div class="info-container-item">
+                    <span>Компания Schüco является ведущим поставщиком инновационных ограждающих конструкций. Компания была основана в 1951 году, Восточная Вестфалия</span>
+                    <img src="img/info2.png" alt="">
+                </div>
+
+                <div class="info-container-item">
+                    <span>
+                        Благодаря международной сети, состоящей из    предприятий-партнеров по производству конструкций из металла и ПВХ,  электропартнеров, архитекторов, проектировщиков и инвесторов, Schüco реализует долговечные ограждающие конструкции, которые служат человеку, находясь в гармонии с природой и технологиями. Оконные, дверные и фасадные системы Schüco из металла и ПВХ не только соответствуют  самым строгим требованиям с точки зрения дизайна, комфорта и безопасности, но и за счет энергоэффективности способствуют сокращению уровня выбросов CO2 и рациональному использованию природных ресурсов.
+                        <br>
+                        Компания поставляет продукцию, разработанную с учетом потребностей целевых групп и особенностей эксплуатации в различных климатических зонах, как для строительства новых зданий, так и модернизации существующих. На каждом этапе строительства все участники получают поддержку в виде полного комплекса услуг. Schüco насчитывает порядка 4.630 сотрудников и 12.000 предприятий-партнеров в более, чем 80 странах мира. Оборот компании за 2015 год составил 1,430 млрд.
+                    </span>
+
+                    <a href="#" class="info-download"><span>Скачать корпоративную брошюру (pdf, 6.5 MB)</span></a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORARCHITECT -->
+        <section class="forArchitect">
+            <img class="forArchitect-icon" src="img/forArchitect-icon.png" alt="Для архитекторов">
+            <h2>Информация архитекторам</h2>
+
+            <div class="forArchitect-container">
+                <div class="forArchitect-container-item">
+                    <div class="forArchitect-item-text">
+                        Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра
+                        шрифтов, абзацев, отступов и т.д. Так как цель применения такого текста исключительно демонстрационная, то и смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на руку при оценке качества
+                        восприятия макета.
+                        <br>
+                        <br> Самым известным «рыбным» текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в книгопечатании еще в XVI веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из его
+                        трактата «О пределах добра и зла» средневековый книгопечатник вырвал отдельные фразы и слова, получив текст-«рыбу», широко используемый и по сей день. Конечно, возникают некоторые вопросы, связанные с использованием Lorem ipsum
+                        на сайтах и проектах, ориентированных на кириллический контент – написание символов на латыни и на кириллице значительно различается.
+                        <br>
+                        <br> И даже с языками, использующими латинский алфавит, могут возникнуть небольшие проблемы: в различных языках те или иные буквы встречаются с разной частотой, имеется разница в длине наиболее распространенных слов. Отсюда напрашивается
+                        вывод, что все же лучше использовать в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта.
+                    </div>
+
+                    <a href="#" class="forArchitect-goto">Перейти к разделу</a>
+                </div>
+
+                <img src="img/forArchitect-img.png" alt="Пример для архитектора">
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio">
+            <img class="portfolio-icon" src="img/portfolio-icon.png" alt="Для архитекторов">
+            <h2>Наши выполненные проекты</h2>
+
+            <div class="portfolio-row">
+                <div class="portfolio-row-item">
+                    <img src="img/portfolio1.png" alt="Пример нашей работы">
+                    <div class="portfolio-item-name">Private Home</div>
+                    <br>
+                    <div class="portfolio-item-location"><span>Расположение</span>: Germany, Winnenden</div>
+                </div>
+
+                <div class="portfolio-row-item">
+                    <img src="img/portfolio2.png" alt="Пример нашей работы">
+                    <div class="portfolio-item-name">Private Home Las Calinas</div>
+                    <br>
+                    <div class="portfolio-item-location"><span>Расположение</span>: Spain, Orihuela</div>
+                </div>
+
+                <div class="portfolio-row-item">
+                    <img src="img/portfolio3.png" alt="Пример нашей работы">
+                    <div class="portfolio-item-name">Eco Berrini</div>
+                    <br>
+                    <div class="portfolio-item-location"><span>Расположение</span>: Brazil, São Paulo</div>
+                </div>
+            </div>
+
+            <div class="portfolio-row">
+                <div class="portfolio-row-item">
+                    <img src="img/portfolio4.png" alt="Пример нашей работы">
+                    <div class="portfolio-item-name">Private Home</div>
+                    <br>
+                    <div class="portfolio-item-location"><span>Расположение</span>: Germany, Winnenden</div>
+                </div>
+
+                <form class="portfolio-form" action="index.html" method="get">
+                    <h3>Форма обратной связи</h3>
+                    <div class="label">Заполните поля и мы свяжемся с вами в течениe 15 минут</div>
+                    <div class="portfolio-form-inputs">
+                        <div class="portfolio-inputs-col">
+                            <input type="text" name="name" value="" placeholder="Укажите ваше имя" required>
+                            <input type="tel" name="phone" value="" placeholder="Номер вашего телефона" required>
+                            <input type="email" name="mail" value="" placeholder="Адрес эл. почты" required>
+                        </div>
+
+                        <div class="portfolio-inputs-col">
+                            <textarea name="message" placeholder="Ваше сообщение*" required></textarea>
+                            <input type="submit" name="submit" value="Отправить">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section class="contacts">
+            <img class="contacts-icon" src="img/contacts-icon.png" alt="Для архитекторов">
+            <h2>Контакты</h2>
+
+            <div class="contacts-row">
+                <div class="contacts-address">
+                    <span>Адрес: </span>АО "ШУКО Интернационал Москва", Химки Бизнес парк, ул. Ленинградская, 39, стр. 5, 141400 Химки, Московская область, Россия
+                </div>
+
+                <div class="contacts-phone">
+                    <span>Адрес: </span>+7 (495) 937-52-37
+                </div>
+
+                <div class="contacts-email">
+                    <span>E-mail: </span>info@schueco.ru
+                </div>
+            </div>
+
+            <h4>
+                Наш офис работает с 10-00 до 19-00.
+                <br>
+                С понедельника по субботу.
+            </h4>
+
+            <div class="contacts-social">
+                <a href="#">
+                    <img src="img/fb.png" alt="Мы в facebook">
+                </a>
+                <a href="#">
+                    <img src="img/insta.png" alt="Мы в instagram">
+                </a>
+            </div>
+
+        </section>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1089230dd055c93012b7c779a71d26320abb1111caa536ebae3a2ebc51bd4e3f&amp;source=constructor" width="100%" height="443" frameborder="0"></iframe>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+            <div class="footer-b1">
+                <img class="toTop" src="img/toTop.png" alt="Вверх">
+                <span>© Copyright. All rights reserved 2017</span>
+            </div>
+
+            <div class="footer-b2">
+                <span>Разработка студии</span>
+                <img src="img/kokosov.png" alt="Веб-студия Кокосов">
+            </div>
+    </footer>
+
+    <script type="text/javascript" src='js/script.js'></script>
+</body>
+
+</html>
