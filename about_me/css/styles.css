@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    padding-top: 60px;
+}
+
+/*INFO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.info {
+    max-width: 660px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+    background: #fbfaf9;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.info h2{
+    font-size: 0px;
+}
+
+.info .info-photo{
+    border-radius: 100px;
+    margin: auto;
+    /*margin-right: 20px;*/
+}
+
+.info-inputs {
+    max-width: 463px;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.info input {
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #333;
+    background: #fcfaf8;
+    color: #666666;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22.01px;
+    text-transform: uppercase;
+}
+
+.approved {
+    width: 184px;
+    height: 166px;
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+}
+
+/*SKILLS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.skills {
+    max-width: 662px;
+    margin: auto;
+    background: #f7f5f2;
+    padding: 36px 49px 38px 20px;
+    margin-bottom: 10px;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.skills h2{
+    color: #010101;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+/*custom checkbox*/
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+label {
+    color: #666666;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+input[type="checkbox"]+label:before {
+    width: 19px;
+    height: 19px;
+    content: "\00a0";
+    display: inline-block;
+    background: #eeeeee;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+}
+
+input[type="checkbox"]:checked+label:before {
+    background: #0093d7;
+    color: #fff;
+    content: "\2713";
+    text-align: center;
+}
+
+.skills-col-item{
+    line-height: 24px;
+}
+
+/*JAVASCPIPT*/
+.javascript{
+    max-width: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    padding:50px 0px;
+    background: #fcfbf9;
+}
+
+.javascript-res{
+    width: 200px;
+    margin-right: 20px;
+}
+
+.javascript-res h2{
+    color: #010101;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.javascript-res div{
+    color: #0093d7;
+    font-family: "Roboto";
+    font-size: 30px;
+    text-align: center;
+}
+
+.javascript-scale{
+    width: 257px;
+    height: 138px;
+    background: url('../img/javascript-scale.png') no-repeat center;
+    position: relative;
+    margin-right: 20px;
+}
+
+.javascript-scale img{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -37px;
+}

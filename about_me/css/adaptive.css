@@ -1,0 +1,54 @@
+/*INFO*/
+@media (max-width:625px),(max-device-width:625px) {
+    body{
+        padding: 0px;
+    }
+
+    .info-inputs{
+        margin-top: 20px;
+    }
+}
+
+
+/*SKILLS*/
+@media (max-width:570px),(max-device-width:570px) {
+    .skills{
+        padding: 20px;
+    }
+
+    .skills-container{
+        grid-template-columns: repeat(2,120px);
+        grid-template-rows: repeat(6,20px);
+        grid-row-gap: 20px;
+    }
+
+    .skills h2{
+        text-align: center;
+    }
+
+    .approved{
+        bottom: 70px;
+        right: 15px;
+    }
+}
+
+@media (max-width:315px),(max-device-width:315px) {
+    .skills-container{
+        grid-template-columns: repeat(1,120px);
+        grid-template-rows: repeat(12,20px);
+        justify-content: center;
+    }
+}
+
+/*JAVASCPIPT*/
+@media (max-width:768px),(max-device-width:768px) {
+    .javascript-res{
+        width: auto;
+        padding: 0px 15px;
+    }
+
+    .javascript-res h2{
+        font-size: 15px;
+    }
+
+}
