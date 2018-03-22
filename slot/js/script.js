@@ -127,7 +127,7 @@ function checkWin() {
     isWin = isWin || verticalCheck(backgrounds)
 
     if (isWin) {
-        audio = new Audio('sounds/win' + Math.ceil((Math.random()) * 3) + '.mp3')
+        audio = new Audio('sounds/win' + Math.ceil((Math.random()) * 2) + '.mp3')
         audio.play()
         var currBet = parseInt($("#bet .odometer-value").text())
         var winSumm = winItemsCount * currBet;
