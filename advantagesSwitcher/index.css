@@ -1,0 +1,14 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background: #ccc;
+}
+
+html {
+  font-size: 10px;
+}

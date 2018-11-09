@@ -1,0 +1,25 @@
+@media (max-width: 570px), (max-device-width: 570px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 510px), (max-device-width: 510px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 450px), (max-device-width: 450px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 400px), (max-device-width: 400px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 340px), (max-device-width: 340px) {
+  html {
+    font-size: 5px;
+  }
+}

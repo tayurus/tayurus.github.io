@@ -1,0 +1,5 @@
+.advantage-label {
+  cursor: pointer;
+  font-size: 4.5rem;
+  user-select: none;
+}
