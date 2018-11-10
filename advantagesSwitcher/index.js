@@ -1,41 +1,52 @@
-//тут хранится состояние трех переключателей
-let state = { cheap: false, quality: false, fast: false };
+//ACTIONS
+const changeSwitcherValue = e => ({
+  type: "changeSwitcherValue",
+  switchName: e.target.name,
+  switchValue: e.target.checked
+});
 
-//это обработчик на изменение значения любого из переключателей
-function updateState(e) {
-  //запоминаем атрибут name измененного переключателя
-  const lastChanged = e.target.name;
+//REDUCERS
+const initialState = { cheap: false, quality: false, fast: false };
+const switchReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "changeSwitcherValue":
+      let newState = Object.assign({}, state);
+      //обновить значениe switch
+      newState[action.switchName] = action.switchValue;
+      //подсчитать сумму
+      const summ = Object.keys(newState).reduce(
+        (acc, key) => acc + newState[key],
+        0
+      );
+      if (summ === 3) {
+        //выключить switch, идущий сразу за измененным
+        const keys = Object.keys(newState);
+        const afterLastChangedKey =
+          keys[(keys.findIndex(key => key === action.switchName) + 1) % 3];
+        newState[afterLastChangedKey] = false;
+      }
 
-  //обновляем состояние массива в соответсnвии с измененным переключателем
-  state[lastChanged] = e.target.checked;
+      return newState;
 
-  //считаем сумму значений всех переключателей
-  const summ = Object.keys(state).reduce((acc, key) => acc + state[key], 0);
-
-  //если сумма равна 3
-  if (summ === 3) {
-    //находим следующий за измененным переключатель
-    //в виде числа
-    const afterLastChangedIndex =
-      Object.keys(state).findIndex(item => item === lastChanged) + 1;
-
-    //в виде ключа
-    const afterLastChangedKey = Object.keys(state).filter(
-      (item, index) => index === afterLastChangedIndex % 3
-    )[0];
-
-    //выключаем следующий за измененным переключателель
-    document.querySelector(
-      "[name=" + afterLastChangedKey + "]"
-    ).checked = false;
-
-    //то же самое делаем в состоянии
-    state[afterLastChangedKey] = false;
+    default:
+      return state;
   }
+};
+
+//STORE
+let store = Redux.createStore(switchReducer);
+store.subscribe(render);
+
+function render() {
+  const state = store.getState();
+  Object.keys(state).forEach(
+    key => (document.querySelector("[name=" + key + "]").checked = state[key])
+  );
+  console.log("STORE = ", store.getState());
 }
 
 //вешаем обработчик
 var switchers = document.getElementsByClassName("switcher-checkbox");
-Array.from(switchers).forEach(function(element) {
-  element.addEventListener("change", updateState);
+Array.from(switchers).forEach(function(e) {
+  e.addEventListener("change", e => store.dispatch(changeSwitcherValue(e)));
 });
