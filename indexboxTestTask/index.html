@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Webpage</title>
+		<link rel="icon" type="image/ico" href="img/favicon.ico">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Awesome webpage">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<noscript>
+			<p>Please enable Javascript</p>
+		</noscript>
+		<header class="header">
+			<div class="container row header__wrapper">
+				<div class="row header__wrapper-main"><a href="#" class="row"><img src="img/header-logo.png" alt="logo" class="header__logo-img">
+						<h1><span class="header__title">INDEX</span><span class="header__title header__title_blue">BOX</span></h1></a>
+					<div class="tagline">
+						<div class="tagline__text">Get more out of IndexBox — Go Pro</div>
+					</div>
+				</div><a href="#" class="header__hamburger"><i class="fa fa-bars"></i></a>
+				<nav class="header__wrapper-nav row">
+					<ul class="header__nav row">
+						<li><a href="#" class="header__nav-item header__nav-item_active">Download Data</a></li>
+						<li><a href="#" class="header__nav-item">Analyze data</a></li>
+						<li><a href="#" class="header__nav-item">Report writing</a></li>
+					</ul>
+					<ul class="header__nav row header__nav_login"> 
+						<li><a href="#" class="header__nav-item">Sign up</a></li>
+						<li><a href="#" class="header__nav-item">Sign in</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="bg-gray py-15">
+				<h2 hidden>Селекты</h2>
+				<div class="container">
+					<div class="grid grid_select">
+						<div class="select">
+							<input list="product" placeholder="Product" class="select__field select__field_sort select__field_big">
+							<datalist id="product"></datalist>
+						</div>
+						<div class="select">     
+							<input list="country" placeholder="Country" class="select__field select__field_sort">
+							<datalist id="country"></datalist>
+						</div>
+						<div class="select">
+							<input list="factor" placeholder="Factor" class="select__field select__field_sort">
+							<datalist id="factor"></datalist>
+						</div>
+						<div class="select">
+							<input list="period" placeholder="Period" class="select__field select__field_sort">
+							<datalist id="period"></datalist>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container py-25">
+				<h2 hidden>Поиск</h2>
+				<div class="row row_format-options">
+					<div class="label mr-2">Output Formating Options show by</div>
+					<div class="row">
+						<div class="format-option">
+							<input type="radio" name="format" id="factor-checkbox" value="factor" checked hidden>
+							<label for="factor-checkbox" class="format-option__label">Factor</label>
+						</div>
+						<div class="format-option">
+							<input type="radio" name="format" id="country-checkbox" value="country" hidden>
+							<label for="country-checkbox" class="format-option__label">Country/Region</label>
+						</div>
+						<div class="format-option">
+							<input type="radio" name="format" id="code-checkbox" value="code" hidden>
+							<label for="code-checkbox" class="format-option__label">Code</label>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid_search my-3">
+					<div class="select">
+						<div class="select__title">Volume</div>
+						<select data-name="Volume" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Value</div>
+						<select data-name="Value" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Price</div>
+						<select data-name="Price" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Area</div>
+						<select data-name="Area" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Livestock</div>
+						<select data-name="Livestock" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Yield</div>
+						<select data-name="Yield" class="select__field"></select>
+					</div>
+					<div class="select">
+						<div class="select__title">Per Capita</div>
+						<select data-name="Per Capita" class="select__field"></select>
+					</div>
+				</div>
+				<div class="row row_buttons">   
+					<button class="button mx-1">Find data</button>
+					<button class="button button_danger mx-1">Clear</button>
+				</div>
+				<div class="search-results my-3 container">
+					<div class="search-results__title">Cats didn’t find anything in the box yet,<br>so have a nice analyze meow :)</div><img src="img/search-results-nothing.png" alt="nothing to show!" class="search-results__img">
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper container row">
+				<div class="footer__primary">
+					<div class="footer__text">Ask us<a href="tel:442032393063" class="footer__text">&nbsp;44-20-3239-3063 (UK);&nbsp;</a><a href="tel:14157998701" class="footer__text">&nbsp;1-415-799-8701 (US);&nbsp;</a><br>© 2018 IndexBox, Inc.</div>
+				</div>
+				<nav class="footer__nav">
+					<ul class="footer__nav-list row">
+						<li><a href="#" class="footer__nav-item">FAQ</a></li>
+						<li><a href="#" class="footer__nav-item">Privacy Policy</a></li>
+						<li><a href="#" class="footer__nav-item">Cookie</a></li>
+						<li><a href="#" class="footer__nav-item">Terms Of Service</a></li>
+						<li><a href="#" class="footer__nav-item">Pricing Plan</a></li>
+						<li><a href="#" class="footer__nav-item">Metadata and Definitions</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	</body>
+</html>

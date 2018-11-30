@@ -1,0 +1,49 @@
+[{
+  "id": "16",
+  "factor": "Consumption Volume"
+}, {
+  "id": "18",
+  "factor": "Consumption Value"
+}, {
+  "id": "13",
+  "factor": "Production Volume"
+}, {
+  "id": "19",
+  "factor": "Production Value"
+}, {
+  "id": "3",
+  "factor": "Import Volume"
+}, {
+  "id": "4",
+  "factor": "Import Value"
+}, {
+  "id": "1",
+  "factor": "Export Volume"
+}, {
+  "id": "2",
+  "factor": "Export Value"
+}, {
+  "id": "5",
+  "factor": "Import Price"
+}, {
+  "id": "6",
+  "factor": "Export Price"
+}, {
+  "id": "9",
+  "factor": "Harvested Area"
+}, {
+  "id": "10",
+  "factor": "Producing Animals"
+}, {
+  "id": "14",
+  "factor": "Yield"
+}, {
+  "id": "17",
+  "factor": "Per Capita Consumption"
+}, {
+  "id": "8",
+  "factor": "Net Export Volume"
+}, {
+  "id": "7",
+  "factor": "Net Export Value"
+}]

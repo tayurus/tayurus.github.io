@@ -1,0 +1,54 @@
+[{
+  "json": {
+    "kg": 1,
+    "tonnes": 1000,
+    "thousand tonnes": 1000000,
+    "million tonnes": 1000000000
+  },
+  "name": "Volume"
+}, {
+  "json": {
+    "USD": 1,
+    "thousand USD": 1000,
+    "million USD": 1000000,
+    "billion USD": 1000000000
+  },
+  "name": "Value"
+}, {
+  "json": {
+    "USD per kg": 1,
+    "USD per tonne": 0.001,
+    "thousand USD per kg": 1000
+  },
+  "name": "Price"
+}, {
+  "json": {
+    "ha": 1,
+    "thousand ha": 1000,
+    "million ha": 1000000,
+    "billion ha": 1000000000
+  },
+  "name": "Area"
+}, {
+  "json": {
+    "head": 1,
+    "thousand heads": 1000,
+    "million heads": 1000000,
+    "billion heads": 1000000000
+  },
+  "name": "Livestock"
+}, {
+  "json": {
+    "kg per unit": 1,
+    "tonne per unit": 1000,
+    "kg per 1000 units": 0.001
+  },
+  "name": "Yield"
+}, {
+  "json": {
+    "tonne per person": 1000,
+    "kg per person": 1,
+    "kg per 1000 persons": 0.001
+  },
+  "name": "Per Capita"
+}]
