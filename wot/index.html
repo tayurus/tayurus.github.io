@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="enter">
+
+    <video class="enter__video">
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.webm" type="video/webm">
+    </video>
+
+    <div class="enter__shadow"></div>
+
+    <div class="enter__wrapper">
+      <img class="enter__logo" src="img/wot_logo.png" alt="logo" />
+
+
+      <div class="row align-items-center mb-1">
+        <div class="col-md-4 px-0">
+            <label class="enter__label mr-2 pl-4" for="server">Сервер и пинг (мс):</label>
+        </div>
+        <div class="col-md-4 px-0 mr-2">
+          <select class="enter__select mr-2" id='server'>
+            <option value="">WOT RU1</option>
+            <option value="">WOT RU2</option>
+            <option value="">WOT RU3</option>
+            <option value="">WOT RU4</option>
+            <option value="">WOT RU5</option>
+          </select>
+        </div>
+
+        <div class="col-md-3 px-0">
+          <label class="enter__label enter__label_underline" for="server">Создать аккаунт</label>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mb-1">
+        <div class="col-md-4 px-0">
+            <label class="enter__label mr-2 pl-4" for="mail">Электронная почта:</label>
+        </div>
+        <div class="col-md-4 px-0 mr-2">
+          <input type="email" class="enter__input mr-2" id='mail' value="rjuvagin@gmail.com"/>
+        </div>
+
+        <div class="col-md-3 px-0">
+          <label class="enter__label enter__label_underline" >Не удается войти?</label>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mb-1">
+        <div class="col-md-4 px-0 text-right">
+            <label class="enter__label mr-2 " for="password">Пароль:</label>
+        </div>
+        <div class="col-md-4 px-0 mr-2">
+          <input type="text" class="enter__input mr-2" id='password' value="**********"/>
+        </div>
+
+        <div class="col-md-3 px-0">
+          <label class="enter__label" >RU</label>
+        </div>
+      </div>
+
+      <button type="button" class="button button_enter mt-4"></button>
+
+    </div>
+
+
+  </div>
+
+  <script type="text/javascript" src='index.js'>
+
+  </script>
+
+</body>
+
+</html>

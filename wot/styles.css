@@ -1,0 +1,117 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+
+@font-face {
+  src: url('Helios_Cond.ttf');
+  font-family: "Helios_Cond";
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "Helios_Cond";
+  user-select: none;
+    outline: none !important;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+label {
+  padding: 0;
+  margin: 0;
+}
+
+button{
+
+}
+
+.button{
+
+}
+
+.button_enter{
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  max-height: 50px;
+  height: 100vw;
+  background: url('img/button.jpg') no-repeat center / contain;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+select{
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    cursor: pointer;
+    color: #ccc;
+    max-width: 200px;
+    min-width: 125px;
+    width: 100%;
+    border: 1px solid #797366;
+    background: #0e0e07 url('img/select-arrow.png') no-repeat 100% center / contain;
+    padding: 0.1rem;
+}
+
+input.enter__input{
+  cursor: pointer;
+  color: #ccc;
+  max-width: 200px;
+  min-width: 125px;
+  width: 100%;
+  border: 1px solid #797366;
+  background: #0e0e07;
+  padding: 0.1rem 0.25rem;
+}
+
+
+.enter__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.enter__shadow {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 80%;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background: url('img/shadow.png') no-repeat center / contain;
+}
+
+.enter__wrapper {
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  max-width: 450px;
+  height: 40%;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+}
+
+.enter__logo {
+  width: 100%;
+}
+
+.enter__label {
+  color: #b4b1a3;
+  white-space: nowrap;
+}
+
+.enter__label_underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
