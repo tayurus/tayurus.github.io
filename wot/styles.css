@@ -38,14 +38,14 @@ button{
   min-height: 100vh;
   max-height: 100vh;
   z-index: 1;
-  background: url('img/border-shadow.png') no-repeat center / cover;
+  box-shadow: inset 0 0 10vw 6vw black;
 }
 
 .button_enter{
   display: block;
   margin: 0 auto;
   width: 35%;
-  max-height: 50px;
+  max-height: 38px;
   height: 100vw;
   background: url('img/button.jpg') no-repeat center / contain;
   border: none;
