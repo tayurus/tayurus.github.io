@@ -30,6 +30,17 @@ button{
 
 }
 
+.border-shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  z-index: 1;
+  background: url('img/border-shadow.png') no-repeat center / cover;
+}
+
 .button_enter{
   display: block;
   margin: 0 auto;
@@ -111,7 +122,38 @@ input.enter__input{
   white-space: nowrap;
 }
 
+a .enter__label:hover{
+  color: tomato;
+}
+
 .enter__label_underline{
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.bottom{
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/bottom-shadow.png) no-repeat center;
+}
+
+.bottom__logo{
+  width: 150px;
+}
+
+.bottom__text{
+  font-size: 13px;
+  color: #ffffff80;
+}
+
+.bottom__button-arrow{
   cursor: pointer;
 }

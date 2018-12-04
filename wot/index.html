@@ -8,10 +8,11 @@
 </head>
 
 <body>
-
+  <div class="border-shadow"> </div>
   <div class="enter">
 
-    <video class="enter__video" autoplay>
+
+    <video class="enter__video" loop>
       <source src="video.mp4" type="video/mp4">
       <source src="video.webm" type="video/webm">
     </video>
@@ -24,7 +25,7 @@
 
       <div class="row align-items-center mb-1">
         <div class="col-md-4 px-0">
-            <label class="enter__label mr-2 pl-4" for="server">Сервер и пинг (мс):</label>
+          <label class="enter__label mr-2 pl-4" for="server">Сервер и пинг (мс):</label>
         </div>
         <div class="col-md-4 px-0 mr-2">
           <select class="enter__select mr-2" id='server'>
@@ -37,35 +38,40 @@
         </div>
 
         <div class="col-md-3 px-0">
-          <label class="enter__label enter__label_underline" for="server">Создать аккаунт</label>
+          <a target="_blank" href="https://ru.wargaming.net/registration/ru/">
+            <label class="enter__label enter__label_underline">Создать аккаунт</label></a>
+
         </div>
       </div>
 
 
       <div class="row align-items-center mb-1">
         <div class="col-md-4 px-0">
-            <label class="enter__label mr-2 pl-4" for="mail">Электронная почта:</label>
+          <label class="enter__label mr-2 pl-4" for="mail">Электронная почта:</label>
         </div>
         <div class="col-md-4 px-0 mr-2">
-          <input type="email" class="enter__input mr-2" id='mail' value="rjuvagin@gmail.com"/>
+          <input type="email" class="enter__input mr-2" id='mail' value="rjuvagin@gmail.com" />
         </div>
 
         <div class="col-md-3 px-0">
-          <label class="enter__label enter__label_underline" >Не удается войти?</label>
+          <a target="_blank" href="https://ru.wargaming.net/personal/password_reset/new/?utm_source=login-screen&utm_medium=link&utm_campaign=wot-client">
+            <label class="enter__label enter__label_underline">Не удается войти?</label>
+          </a>
+
         </div>
       </div>
 
 
       <div class="row align-items-center mb-1">
         <div class="col-md-4 px-0 text-right">
-            <label class="enter__label mr-2 " for="password">Пароль:</label>
+          <label class="enter__label mr-2 " for="password">Пароль:</label>
         </div>
         <div class="col-md-4 px-0 mr-2">
-          <input type="text" class="enter__input mr-2" id='password' value="**********"/>
+          <input type="text" class="enter__input mr-2" id='password' value="**********" />
         </div>
 
         <div class="col-md-3 px-0">
-          <label class="enter__label" >RU</label>
+          <label class="enter__label">RU</label>
         </div>
       </div>
 
@@ -73,7 +79,20 @@
 
     </div>
 
+  </div>
 
+  <div class="bottom">
+    <img src="img/wargaming.png" alt="wargaming logo" class="bottom__logo mr-3"/>
+    <div class="bottom__text">
+      © 2009-2018 Wargaming.net. Все права защищены.
+      <br>
+      <div class="d-flex align-items-center">
+        <div class="bottom__text mr-2">
+          Юридическая информация
+        </div>
+        <img class="bottom__button-arrow" src="img/icon_button_arrow_right.png" alt="иконка">
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript" src='index.js'>
