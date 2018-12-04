@@ -142,7 +142,6 @@ a .enter__label:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(img/bottom-shadow.png) no-repeat center;
 }
 
 .bottom__logo{
