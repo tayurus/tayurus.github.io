@@ -1,0 +1,12 @@
+<svg viewBox="0 0 23 22" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+    <radialGradient id="gradient-0" gradientUnits="userSpaceOnUse" cx="10.657" cy="5.793" r="12.5" spreadMethod="pad&quot; gradientTransform=&quot;matrix(1.5, 0.0, 0.0, 1.0, -6.5, 0.25)" gradientTransform="matrix(1.947816, 0.003326, -0.001707, 0.999999, -11.367028, -0.039902)">
+      <stop offset="0" style="stop-color: rgba(216, 216, 216, 1)"></stop>
+      <stop offset="1" style="stop-color: rgba(165, 165, 165, 1)"></stop>
+    </radialGradient>
+  </defs>
+  <path d="M 18.328 1.568 C 16.383 -3.079 22.072 7.843 22.072 11.025 C 22.072 14.206 17 23.803 18.328 20.481 C 20.65 11.025 20.65 11.025 18.328 1.568 Z M 14.368 3.867 C 13 0.362 17 8.6 17 11 C 17 13.4 13 21.17 14.368 18.133 C 16 11 16 11 14.368 3.867 Z M 12 9 L 13 11 L 12 13 Z M 10 3 L 10 19 L 4 16 L 4 6 Z M 0 7 L 3 7 L 3 15 L 0 15 Z" style="fill: url(#gradient-0);"></path>
+</svg>

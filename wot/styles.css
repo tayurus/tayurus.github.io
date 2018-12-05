@@ -5,11 +5,11 @@
   font-family: "Helios_Cond";
 }
 
-*{
+* {
   box-sizing: border-box;
   font-family: "Helios_Cond";
   user-select: none;
-    outline: none !important;
+  outline: none !important;
 }
 
 body {
@@ -22,15 +22,11 @@ label {
   margin: 0;
 }
 
-button{
+button {}
 
-}
+.button {}
 
-.button{
-
-}
-
-.border-shadow{
+.border-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +37,7 @@ button{
   box-shadow: inset 0 0 10vw 6vw black;
 }
 
-.button_enter{
+.button_enter {
   display: block;
   margin: 0 auto;
   width: 35%;
@@ -52,24 +48,22 @@ button{
   cursor: pointer;
 }
 
-
-
-select{
+select {
   -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-    cursor: pointer;
-    color: #ccc;
-    max-width: 200px;
-    min-width: 125px;
-    width: 100%;
-    border: 1px solid #797366;
-    background: #0e0e07 url('img/select-arrow.png') no-repeat 100% center / contain;
-    padding: 0.1rem;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  cursor: pointer;
+  color: #ccc;
+  max-width: 200px;
+  min-width: 125px;
+  width: 100%;
+  border: 1px solid #797366;
+  background: #0e0e07 url('img/select-arrow.png') no-repeat 100% center / contain;
+  padding: 0.1rem;
 }
 
-input.enter__input{
+input.enter__input {
   cursor: pointer;
   color: #ccc;
   max-width: 200px;
@@ -80,7 +74,6 @@ input.enter__input{
   padding: 0.1rem 0.25rem;
 }
 
-
 .enter__video {
   position: absolute;
   top: 0;
@@ -89,6 +82,16 @@ input.enter__input{
   min-height: 100vh;
   max-height: 100vh;
   object-fit: cover;
+}
+
+.enter__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: url('img/1.jpg') no-repeat center / cover;
 }
 
 .enter__shadow {
@@ -122,16 +125,16 @@ input.enter__input{
   white-space: nowrap;
 }
 
-a .enter__label:hover{
+a .enter__label:hover {
   color: tomato;
 }
 
-.enter__label_underline{
+.enter__label_underline {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.bottom{
+.bottom {
   position: absolute;
   z-index: 1;
   bottom: 0%;
@@ -144,15 +147,53 @@ a .enter__label:hover{
   justify-content: center;
 }
 
-.bottom__logo{
+.bottom__logo {
   width: 150px;
 }
 
-.bottom__text{
+.bottom__text {
   font-size: 13px;
   color: #ffffff80;
 }
 
-.bottom__button-arrow{
+.bottom__button-arrow {
   cursor: pointer;
+}
+
+.top {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  width: 70px;
+  height: 25px;
+  z-index: 1;
+}
+
+.speaker {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url('img/speaker.svg') no-repeat center / contain;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  filter: opacity(65%);
+}
+
+.player {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url('img/player.svg') no-repeat center / contain;
+  left: 45px;
+  cursor: pointer;
+  filter: opacity(65%);
+}
+
+.speaker:hover, .player:hover {
+  filter: opacity(100%);
+}
+
+.hidden {
+  display: none;
 }
