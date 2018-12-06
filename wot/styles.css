@@ -1,7 +1,7 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 
 @font-face {
-  src: url('Helios_Cond.ttf');
+  src: url("Helios_Cond.ttf");
   font-family: "Helios_Cond";
 }
 
@@ -22,9 +22,11 @@ label {
   margin: 0;
 }
 
-button {}
+button {
+}
 
-.button {}
+.button {
+}
 
 .border-shadow {
   position: absolute;
@@ -43,7 +45,7 @@ button {}
   width: 35%;
   max-height: 38px;
   height: 100vw;
-  background: url('img/button.jpg') no-repeat center / contain;
+  background: url("img/button.jpg") no-repeat center / contain;
   border: none;
   cursor: pointer;
 }
@@ -52,14 +54,15 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: '';
+  text-overflow: "";
   cursor: pointer;
   color: #ccc;
   max-width: 200px;
   min-width: 125px;
   width: 100%;
   border: 1px solid #797366;
-  background: #0e0e07 url('img/select-arrow.png') no-repeat 100% center / contain;
+  background: #0e0e07 url("img/select-arrow.png") no-repeat 100% center /
+    contain;
   padding: 0.1rem;
 }
 
@@ -91,7 +94,7 @@ input.enter__input {
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  background: url('img/1.jpg') no-repeat center / cover;
+  background: url("img/1.jpg") no-repeat center / cover;
 }
 
 .enter__shadow {
@@ -102,7 +105,13 @@ input.enter__input {
   left: 50%;
   top: 10%;
   transform: translateX(-50%);
-  background: url('img/shadow.png') no-repeat center / contain;
+  background: url("img/shadow.png") no-repeat center / contain;
+}
+
+.enter__shadow_bottom {
+  width: 40%;
+  height: 100%;
+  top: 23%;
 }
 
 .enter__wrapper {
@@ -173,7 +182,7 @@ a .enter__label:hover {
   position: absolute;
   width: 25px;
   height: 25px;
-  background: url('img/speaker.svg') no-repeat center / contain;
+  background: url("img/speaker.svg") no-repeat center / contain;
   top: 0;
   left: 0;
   cursor: pointer;
@@ -184,14 +193,82 @@ a .enter__label:hover {
   position: absolute;
   width: 25px;
   height: 25px;
-  background: url('img/player.svg') no-repeat center / contain;
+  background: url("img/player.svg") no-repeat center / contain;
   left: 45px;
   cursor: pointer;
   filter: opacity(65%);
 }
 
-.speaker:hover, .player:hover {
+.speaker:hover,
+.player:hover {
   filter: opacity(100%);
+}
+
+.enter__socials {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 15px;
+  border: 1px solid #cccccc80;
+}
+
+.social {
+  position: relative;
+  margin: 0 1px;
+}
+
+.social__icon {
+  display: block;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+}
+
+.social__icon_vk {
+  background: url("img/vkontakte.png") no-repeat center / contain;
+}
+
+.social__icon_fb {
+  background: url("img/facebook.png") no-repeat center / contain;
+}
+
+.social__icon_gp {
+  background: url("img/google.png") no-repeat center / contain;
+}
+
+.social__icon_wg {
+  background: url("img/wgni.png") no-repeat center / contain;
+}
+
+.social__tooltip-title {
+  color: #ded8bb;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.social__tooltip {
+  display: none;
+  position: relative;
+  top: 35px;
+  left: 35px;
+  padding: 15px 20px;
+  white-space: nowrap;
+  background: #040301;
+  border: 1px solid #cccccc80;
+  position: absolute;
+  box-shadow: inset 0px 0px 10px 10px #1f1f17;
+}
+
+.social__icon:hover + .social__tooltip {
+  display: block;
+}
+
+.social__tooltip-text {
+  color: #b4b1a3;
+  font-size: 14px;
 }
 
 .hidden {
