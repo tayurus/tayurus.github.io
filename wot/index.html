@@ -11,11 +11,15 @@
 </head>
 
 <body>
-  <div class="border-shadow"> </div>
+  <div class="border-shadow"></div>
 
   <div class="top">
-    <div class="speaker"></div>
-    <div class="player"></div>
+    <label class="enter__label">World of Tanks v.1.2.0.2 #1052</label>
+    <div class="d-flex align-items-center justify-content-between" style='width:75px'>
+      <div class="speaker"></div>
+      <div class="player"></div>
+    </div>
+
   </div>
 
   <div class="enter">
@@ -39,13 +43,111 @@
           <label class="enter__label mr-2 pl-4" for="server">Сервер и пинг (мс):</label>
         </div>
         <div class="col-md-4 px-0 mr-2">
-          <select class="enter__select mr-2" id='server'>
-            <option value="">WOT RU1</option>
-            <option value="">WOT RU2</option>
-            <option value="">WOT RU3</option>
-            <option value="">WOT RU4</option>
-            <option value="">WOT RU5</option>
-          </select>
+
+          <div class="select">
+            <div class="select__selected-option">
+
+              <div class="option">
+                <div class="option__text">WOT RU1</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">33</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="options hide">
+
+              <div class="option">
+                <div class="option__text">Авто</div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU1</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">33</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU2</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value">66</div>
+                  <div class="option__ping-icon option__ping-icon_middle"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU3</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">33</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU4</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value">200</div>
+                  <div class="option__ping-icon option__ping-icon_high"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU5</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value">150</div>
+                  <div class="option__ping-icon option__ping-icon_high"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU6</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">33</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU7</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">33</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU8</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">55</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU9</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">40</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+              <div class="option">
+                <div class="option__text">WOT RU10</div>
+                <div class="option__ping-wrapper">
+                  <div class="option__ping-value option__ping-value_low">10</div>
+                  <div class="option__ping-icon option__ping-icon_low"></div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
         </div>
 
         <div class="col-md-3 px-0">
@@ -90,43 +192,43 @@
 
       <div class="enter__socials mt-4">
 
-          <label class="enter__label mr-2">Быстрый вход:</label>
+        <label class="enter__label mr-2">Быстрый вход:</label>
 
-          <div class="social">
-            <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_vk" target="_blank"></a>
-            <div class="social__tooltip">
-              <div class="social__tooltip-title">Вход через социальную сеть</div>
-              <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети ВКонтакте.</div>
-              <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
-            </div>
+        <div class="social">
+          <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_vk" target="_blank"></a>
+          <div class="social__tooltip">
+            <div class="social__tooltip-title">Вход через социальную сеть</div>
+            <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети ВКонтакте.</div>
+            <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
           </div>
+        </div>
 
-          <div class="social">
-            <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_fb" target="_blank"></a>
-            <div class="social__tooltip">
-              <div class="social__tooltip-title">Вход через социальную сеть</div>
-              <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Facebook.</div>
-              <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
-            </div>
+        <div class="social">
+          <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_fb" target="_blank"></a>
+          <div class="social__tooltip">
+            <div class="social__tooltip-title">Вход через социальную сеть</div>
+            <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Facebook.</div>
+            <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
           </div>
+        </div>
 
-          <div class="social">
-            <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_gp" target="_blank"></a>
-            <div class="social__tooltip">
-              <div class="social__tooltip-title">Вход через социальную сеть</div>
-              <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Google plus.</div>
-              <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
-            </div>
+        <div class="social">
+          <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_gp" target="_blank"></a>
+          <div class="social__tooltip">
+            <div class="social__tooltip-title">Вход через социальную сеть</div>
+            <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Google plus.</div>
+            <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
           </div>
+        </div>
 
-          <div class="social">
-            <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_wg" target="_blank"></a>
-            <div class="social__tooltip">
-              <div class="social__tooltip-title">Вход через социальную сеть</div>
-              <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Wargaming.</div>
-              <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
-            </div>
+        <div class="social">
+          <a href="https://ru.wargaming.net/registration/ru" class="social__icon social__icon_wg" target="_blank"></a>
+          <div class="social__tooltip">
+            <div class="social__tooltip-title">Вход через социальную сеть</div>
+            <div class="social__tooltip-text">Нажмите, чтобы войти в игру через ваш аккаунт в сети Wargaming.</div>
+            <div class="social__tooltip-text">Будет открыт браузер по-умолчанию и страница выбранной вами социальной сети.</div>
           </div>
+        </div>
 
       </div>
 

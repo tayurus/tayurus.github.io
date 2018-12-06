@@ -50,22 +50,6 @@ button {
   cursor: pointer;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: "";
-  cursor: pointer;
-  color: #ccc;
-  max-width: 200px;
-  min-width: 125px;
-  width: 100%;
-  border: 1px solid #797366;
-  background: #0e0e07 url("img/select-arrow.png") no-repeat 100% center /
-    contain;
-  padding: 0.1rem;
-}
-
 input.enter__input {
   cursor: pointer;
   color: #ccc;
@@ -170,31 +154,28 @@ a .enter__label:hover {
 }
 
 .top {
-  position: absolute;
-  top: 2%;
-  right: 1%;
-  width: 70px;
+  position: relative;
+  top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   height: 25px;
   z-index: 1;
+  padding: 0px 23px;
 }
 
 .speaker {
-  position: absolute;
   width: 25px;
   height: 25px;
   background: url("img/speaker.svg") no-repeat center / contain;
-  top: 0;
-  left: 0;
   cursor: pointer;
   filter: opacity(65%);
 }
 
 .player {
-  position: absolute;
   width: 25px;
   height: 25px;
   background: url("img/player.svg") no-repeat center / contain;
-  left: 45px;
   cursor: pointer;
   filter: opacity(65%);
 }
@@ -272,5 +253,109 @@ a .enter__label:hover {
 }
 
 .hidden {
+  display: none;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.select__selected-option {
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.select__selected-option .option {
+  padding: 0px 3px;
+}
+
+.select__selected-option::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("img/select-arrow.png") no-repeat center / contain;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 1px 6px;
+  border-bottom: 0.3px solid #ccc;
+}
+
+.option__text {
+  font-size: 13px;
+  color: #b4b1a3;
+}
+
+.option__ping-value {
+  font-size: 12px;
+  color: #ccc;
+  margin-right: 2px;
+}
+
+.option__ping-value_low {
+  color: #557722;
+}
+
+.option:hover {
+  background: #2e2e22;
+}
+
+.option:hover .option__text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.select__selected-option .option:hover {
+  background: #000;
+}
+
+.select__selected-option .option:hover .option__text {
+  color: #b4b1a3;
+  font-weight: 400;
+}
+
+.option__ping-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.select__selected-option .option__ping-wrapper {
+  padding-right: 20px;
+}
+
+.option__ping-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.option__ping-icon_low {
+  background: url("img/stairs_indicator_low.png") no-repeat center / contain;
+}
+
+.option__ping-icon_middle {
+  background: url("img/stairs_indicator_middle.png") no-repeat center / contain;
+}
+
+.option__ping-icon_high {
+  background: url("img/stairs_indicator_high.png") no-repeat center / contain;
+}
+
+.options {
+  width: 100%;
+  position: absolute;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+
+.hide {
   display: none;
 }
