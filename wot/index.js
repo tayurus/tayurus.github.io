@@ -2,6 +2,17 @@ document.addEventListener("DOMContentLoaded", function() {
   let selectOption = document.querySelector(".select__selected-option");
   let options = document.querySelector(".options");
   let body = document.getElementsByTagName("body")[0];
+  let password = document.querySelector("#password");
+  var speaker = document.querySelector(".speaker");
+  var video = document.querySelector(".enter__video");
+  var player = document.querySelector(".player");
+
+  password.oninput = function(e) {
+    const val = e.target.value;
+    e.target.value = Array(val.length)
+      .fill("*")
+      .join("");
+  };
 
   selectOption.onclick = function(e) {
     e.stopPropagation();
@@ -19,11 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
   });
 
-  var speaker = document.querySelector(".speaker");
-  var video = document.querySelector(".enter__video");
-
-  // video.trigger()
-
   speaker.onclick = function() {
     if (video.muted) {
       video.muted = false;
@@ -31,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
       video.muted = true;
     }
   };
-
-  var player = document.querySelector(".player");
 
   player.onclick = function() {
     var video = document.querySelector(".enter__video");

@@ -153,6 +153,10 @@ a .enter__label:hover {
   cursor: pointer;
 }
 
+.bottom__button-arrow:hover {
+  filter: sepia(100%);
+}
+
 .top {
   position: relative;
   top: 12px;
@@ -263,6 +267,7 @@ a .enter__label:hover {
 
 .select__selected-option {
   border: 1px solid #ccc;
+  border-bottom: none;
   position: relative;
 }
 
@@ -276,8 +281,8 @@ a .enter__label:hover {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background: url("img/select-arrow.png") no-repeat center / contain;
 }
 
@@ -353,6 +358,7 @@ a .enter__label:hover {
   width: 100%;
   position: absolute;
   border: 1px solid #ccc;
+  border-top: none;
   z-index: 2;
 }
 
