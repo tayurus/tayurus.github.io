@@ -2,7 +2,7 @@ body {
   margin: 0px;
   overflow: hidden;
   background: #ccc;
-  box-shadow: 0 -5px 40px 100vw #333;
+  box-shadow: 0 -5px 40px 100vh #333;
 }
 
 .bomb {
