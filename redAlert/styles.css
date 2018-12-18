@@ -27,9 +27,10 @@ body {
 
 .spotlight {
   position: absolute;
-  width: 15px;
-  height: 80%;
-  background: #f6e10080;
+  width: 20px;
+  height: calc(100% + 200px);
+  background: linear-gradient(to top, #f6e100 0% ,#f6e100 20% , #f6e100 21% ,transparent 100% );
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
   bottom: -200px;
   transform-origin: bottom;
 }
@@ -52,6 +53,14 @@ body {
 
 .spotlight_3 {
   left: 75%;
+  animation-name: spotlightMove1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.spotlight_4 {
+  left: 85%;
   animation-name: spotlightMove1;
   animation-duration: 5s;
   animation-timing-function: linear;
@@ -92,13 +101,13 @@ body {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(25deg);
+    transform: rotate(15deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-25deg);
+    transform: rotate(-15deg);
   }
   100% {
     transform: rotate(0deg);
@@ -107,19 +116,19 @@ body {
 
 @keyframes spotlightMove2 {
   0% {
-    transform: rotate(25deg);
+    transform: rotate(0deg);
   }
   25% {
-    transform: rotate(0deg);
+    transform: rotate(-35deg);
   }
   50% {
-    transform: rotate(-25deg);
+    transform: rotate(10deg);
   }
   75% {
-    transform: rotate(0deg);
+    transform: rotate(-35deg);
   }
   100% {
-    transform: rotate(25deg);
+    transform: rotate(0deg);
   }
 }
 
