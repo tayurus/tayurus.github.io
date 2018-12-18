@@ -1,0 +1,130 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+  background: #ccc;
+  box-shadow: 0 -5px 40px 100vw #333;
+}
+
+.bomb {
+  width: 100px;
+  height: 100px;
+  background-image: url("sssr.png"), url("bomb.svg");
+  background-position: 60%, center;
+  background-size: 20px, contain;
+  background-repeat: no-repeat, no-repeat;
+  transform: rotate(25deg);
+  position: absolute;
+  z-index: 1;
+}
+
+.NY {
+  position: absolute;
+  bottom: 0%;
+  height: 20vh;
+  width: 100%;
+  background: url("NY.png") repeat-x center / contain;
+}
+
+.spotlight {
+  position: absolute;
+  width: 15px;
+  height: 80%;
+  background: #f6e10080;
+  bottom: -200px;
+  transform-origin: bottom;
+}
+
+.spotlight_1 {
+  left: 20%;
+  animation-name: spotlightMove1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.spotlight_2 {
+  left: 45%;
+  animation-name: spotlightMove2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.spotlight_3 {
+  left: 75%;
+  animation-name: spotlightMove1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.kirov {
+  background: url("kirov.png") no-repeat center / contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.kirov_1 {
+  width: 300px;
+  height: 125px;
+  left: -125px;
+  animation-name: kirovMove;
+  animation-duration: 50s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.kirov_2 {
+  width: 125px;
+  height: 45px;
+  left: -300px;
+  animation-name: kirovMove;
+  animation-duration: 100s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spotlightMove1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spotlightMove2 {
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes kirovMove {
+  100% {
+    left: calc(100% + 125px);
+  }
+}

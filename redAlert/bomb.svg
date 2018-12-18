@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='300' height='150' >
+  <ellipse cx='190' cy='75' rx='100' ry='30'/>
+  <rect x='50' y='62.5' width='50' height='25'/>
+  <rect x='0' y='72.5' width='50' height='5'/>
+  <polyline points='25,25 65,25 80,65 80,88 65,120 25,120 35,90 35,55 27.4,26' fill='black' stroke='black' stroke-width='5'/>
+</svg>
