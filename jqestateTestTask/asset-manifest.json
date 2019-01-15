@@ -1,16 +1,16 @@
 {
   "main.css": "./static/css/main.ef0021cc.chunk.css",
-  "main.js": "./static/js/main.af2efd81.chunk.js",
-  "main.js.map": "./static/js/main.af2efd81.chunk.js.map",
-  "static/js/1.26b2a9b3.chunk.js": "./static/js/1.26b2a9b3.chunk.js",
-  "static/js/1.26b2a9b3.chunk.js.map": "./static/js/1.26b2a9b3.chunk.js.map",
+  "main.js": "./static/js/main.f994af08.chunk.js",
+  "main.js.map": "./static/js/main.f994af08.chunk.js.map",
+  "static/js/1.2c580be6.chunk.js": "./static/js/1.2c580be6.chunk.js",
+  "static/js/1.2c580be6.chunk.js.map": "./static/js/1.2c580be6.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
   "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
   "static/media/example.jpg": "./static/media/example.294fbce3.jpg",
-  "static/media/card.css": "./static/media/house.a2ab8f3b.svg",
+  "static/media/card.css": "./static/media/sotki.e318fbcb.svg",
   "static/media/header.css": "./static/media/logo.2a3452ce.svg",
   "static/css/main.ef0021cc.chunk.css.map": "./static/css/main.ef0021cc.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.56f09468d62d8a6adb9d9f47c3662e5a.js": "./precache-manifest.56f09468d62d8a6adb9d9f47c3662e5a.js",
+  "precache-manifest.0b7da91159bb0f8a3aa91792dd0ba7a9.js": "./precache-manifest.0b7da91159bb0f8a3aa91792dd0ba7a9.js",
   "service-worker.js": "./service-worker.js"
 }
