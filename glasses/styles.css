@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  cursor: none;
+}
+
+.image {
+  background: url('./images/image.jpg') no-repeat center / contain;
+  width: 1200px;
+  height: 715px;
+  filter: blur(20px);
+}
+
+.glasses {
+  width: 870px;
+  height: 200px;
+  background: url('./images/glasses.png') no-repeat center / contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+  transition-timing-function: linear;
+
+}
+
+.glasses__left {
+  position: absolute;
+  width: 173px;
+  height: 150px;
+  border-radius: 78px;
+  top: 38px;
+  left: 223px;
+  background-image: url('./images/image.jpg');
+  background-repeat: no-repeat;
+  background-position: -390px -296px;
+  transition: .5s;
+  transition-timing-function: linear;
+}
+
+.glasses__right {
+  position: absolute;
+  width: 173px;
+  height: 150px;
+  border-radius: 78px;
+  top: 38px;
+  right: 217px;
+  background-image: url('./images/image.jpg');
+  background-repeat: no-repeat;
+  background-position: -644px -296px;
+  transition: .5s;
+  transition-timing-function: linear;
+}
