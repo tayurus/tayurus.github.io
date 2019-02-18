@@ -44,6 +44,8 @@
 
   <div class="container container_fluid container_fluid-dashboard">
 
+
+
     <div class="row row_with-nav-panel">
       <div class="nav-panel">
 
@@ -122,13 +124,13 @@
 
 
 
-          <div class="account-info ">
+          <div class="account-info account-info_wallet ">
             <div class="account-info__section account-info__section_balance account-info__section_separator">
-              <div class="account-info__title">Balance</div>
+              <div class="account-info__title">Portfolio Balance</div>
               <div class="account-info__summ account-info__summ_blue">£14,595.45</div>
             </div>
 
-            <div class="account-info__section account-info__section_coins account-info__section_separator">
+            <div class="account-info__section account-info__section_coins">
               <div class="account-info__title">Coins</div>
               <div class="account-info__currencies">
                 <div class="account-info__currency account-info__currency_btc"></div>
@@ -138,39 +140,6 @@
               </div>
             </div>
 
-            <div class="account-info__section account-info__section_profit">
-              <div class="account-info__title">Today’s Profit</div>
-
-              <div class="row">
-                <div class="account-info__summ">
-                  <span class="account-info__sign">+</span>£28.00
-                </div>
-
-                <div class="account-info__dynamic account-info__dynamic_top">
-                  3.25%
-                </div>
-              </div>
-
-
-            </div>
-
-            <div class="account-info__btns">
-              <button class="btn btn_icon btn_icon_blue btn_transparent btn_small">
-                <i class="material-icons">
-
-          archive
-
-        </i>Deposit
-              </button>
-
-              <button class="btn btn_icon btn_blue btn_small">
-                <i class="material-icons">
-
-          add_box
-
-        </i>Buy Crypto Currency
-              </button>
-            </div>
           </div>
 
 
@@ -183,25 +152,24 @@
 
 
 
-          <section class="coin-table coin-table_dashboard">
+          <section class="coin-table coin-table_wallet">
 
             <div class="coin-table__top">
-              <h2 class="coin-table__title">Coin Overview</h2>
-              <a href="#" class="coin-table__link">Show all</a>
+              <h2 class="coin-table__title">Your Wallets</h2>
             </div>
 
 
             <table class="coin-table__table">
               <tr class="coin-table__row coin-table__header">
-                <th class="coin-table__th">Coin</th>
-                <th class="coin-table__th">Price</th>
-                <th class="coin-table__th">Change</th>
+                <th class="coin-table__th">Wallet</th>
+                <th class="coin-table__th">BALANCE</th>
+                <th class="coin-table__th">GBP</th>
               </tr>
 
 
 
               <tr class="coin-table__row">
-                <td class="coin-table__td coin-table__td_hover-blur">
+                <td class="coin-table__td">
                   <div class="coin-table__coin-wrapper">
                     <div class="coin-table__coin-img coin-table__coin-img_btc"></div>
                     <div>
@@ -211,25 +179,40 @@
                   </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide">
-                  <div class="coin-table__coin-price">£5206.36</div>
+                <td class="coin-table__td">
+                  <div class="coin-table__coin-price">
+                    0.000345
+                    <span class="coin-table__currency">BTC</span>
+                  </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide coin-table__td_last">
-                  <div class="coin-table__coin-change coin-table__coin-change_top">+164%</div>
+                <td class="coin-table__td coin-table__td_last">
+                  <div class="coin-table__coin-change">£451.55</div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_btn" colspan="2">
-                  <button class="btn btn_blue btn_coin-table">Buy <span class="coin-table__btn-currency">Bitcoin</span>
-                  </button>
-                </td>
+              </tr>
 
+              <tr class="coin-table__row coin-table__row_wallet-controls">
+                <td colspan="3">
+                  <div class="coin-table__wallet-controls">
+
+                    <div class="input__outer input__outer_wallet">
+                      <input class="input input_readonly input_wallet" type="text" readonly value="0sfdsadf5489sdfdfwsed46ghotuhsn " />
+                    </div>
+
+                    <div class="row row_wallet">
+                      <button class="btn btn_wallet btn_no-border btn_blue">SEND FUNDS</button>
+                      <button class="btn btn_wallet">COPY ADDRESS</button>
+                    </div>
+
+                  </div>
+                </td>
               </tr>
 
 
 
               <tr class="coin-table__row">
-                <td class="coin-table__td coin-table__td_hover-blur">
+                <td class="coin-table__td">
                   <div class="coin-table__coin-wrapper">
                     <div class="coin-table__coin-img coin-table__coin-img_eth"></div>
                     <div>
@@ -239,25 +222,40 @@
                   </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide">
-                  <div class="coin-table__coin-price">£130</div>
+                <td class="coin-table__td">
+                  <div class="coin-table__coin-price">
+                    0.000345
+                    <span class="coin-table__currency">BTC</span>
+                  </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide coin-table__td_last">
-                  <div class="coin-table__coin-change coin-table__coin-change_top">+3.4%</div>
+                <td class="coin-table__td coin-table__td_last">
+                  <div class="coin-table__coin-change">£451.55</div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_btn" colspan="2">
-                  <button class="btn btn_blue btn_coin-table">Buy <span class="coin-table__btn-currency">Ethereum</span>
-                  </button>
-                </td>
+              </tr>
 
+              <tr class="coin-table__row coin-table__row_wallet-controls">
+                <td colspan="3">
+                  <div class="coin-table__wallet-controls">
+
+                    <div class="input__outer input__outer_wallet">
+                      <input class="input input_readonly input_wallet" type="text" readonly value="0sfdsadf5489sdfdfwsed46ghotuhsn " />
+                    </div>
+
+                    <div class="row row_wallet">
+                      <button class="btn btn_wallet btn_no-border btn_blue">SEND FUNDS</button>
+                      <button class="btn btn_wallet">COPY ADDRESS</button>
+                    </div>
+
+                  </div>
+                </td>
               </tr>
 
 
 
               <tr class="coin-table__row">
-                <td class="coin-table__td coin-table__td_hover-blur">
+                <td class="coin-table__td">
                   <div class="coin-table__coin-wrapper">
                     <div class="coin-table__coin-img coin-table__coin-img_ltc"></div>
                     <div>
@@ -267,25 +265,40 @@
                   </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide">
-                  <div class="coin-table__coin-price">£43.36</div>
+                <td class="coin-table__td">
+                  <div class="coin-table__coin-price">
+                    0.000345
+                    <span class="coin-table__currency">BTC</span>
+                  </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide coin-table__td_last">
-                  <div class="coin-table__coin-change coin-table__coin-change_top">+1%</div>
+                <td class="coin-table__td coin-table__td_last">
+                  <div class="coin-table__coin-change">£451.55</div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_btn" colspan="2">
-                  <button class="btn btn_blue btn_coin-table">Buy <span class="coin-table__btn-currency">Litecoin</span>
-                  </button>
-                </td>
+              </tr>
 
+              <tr class="coin-table__row coin-table__row_wallet-controls">
+                <td colspan="3">
+                  <div class="coin-table__wallet-controls">
+
+                    <div class="input__outer input__outer_wallet">
+                      <input class="input input_readonly input_wallet" type="text" readonly value="0sfdsadf5489sdfdfwsed46ghotuhsn " />
+                    </div>
+
+                    <div class="row row_wallet">
+                      <button class="btn btn_wallet btn_no-border btn_blue">SEND FUNDS</button>
+                      <button class="btn btn_wallet">COPY ADDRESS</button>
+                    </div>
+
+                  </div>
+                </td>
               </tr>
 
 
 
               <tr class="coin-table__row">
-                <td class="coin-table__td coin-table__td_hover-blur">
+                <td class="coin-table__td">
                   <div class="coin-table__coin-wrapper">
                     <div class="coin-table__coin-img coin-table__coin-img_xrp"></div>
                     <div>
@@ -295,19 +308,34 @@
                   </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide">
-                  <div class="coin-table__coin-price">£206.36</div>
+                <td class="coin-table__td">
+                  <div class="coin-table__coin-price">
+                    0.000345
+                    <span class="coin-table__currency">BTC</span>
+                  </div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_hover-hide coin-table__td_last">
-                  <div class="coin-table__coin-change coin-table__coin-change_bottom">-4%</div>
+                <td class="coin-table__td coin-table__td_last">
+                  <div class="coin-table__coin-change">£451.55</div>
                 </td>
 
-                <td class="coin-table__td coin-table__td_btn" colspan="2">
-                  <button class="btn btn_blue btn_coin-table">Buy <span class="coin-table__btn-currency">Ripple</span>
-                  </button>
-                </td>
+              </tr>
 
+              <tr class="coin-table__row coin-table__row_wallet-controls">
+                <td colspan="3">
+                  <div class="coin-table__wallet-controls">
+
+                    <div class="input__outer input__outer_wallet">
+                      <input class="input input_readonly input_wallet" type="text" readonly value="0sfdsadf5489sdfdfwsed46ghotuhsn " />
+                    </div>
+
+                    <div class="row row_wallet">
+                      <button class="btn btn_wallet btn_no-border btn_blue">SEND FUNDS</button>
+                      <button class="btn btn_wallet">COPY ADDRESS</button>
+                    </div>
+
+                  </div>
+                </td>
               </tr>
 
 
@@ -315,16 +343,6 @@
           </section>
 
 
-
-
-          <section class="site-chart">
-
-            <div class="site-chart__top">
-              <a href="#" class="site-chart__link">See details</a>
-            </div>
-
-            <img src="./images/site-chart/chart.png" alt="chart" class="site-chart__fake">
-          </section>
 
         </div>
 
@@ -335,46 +353,6 @@
   </div>
 
 
-
-
-
-  <section class="advantages-list advantages-list_main">
-    <h2 class="advantages-list__title">The most trusted digital currency platform</h2>
-    <div class="advantages-list__text advantages-list__text_main">Curabitur lobortis id lorem id bibendum id consectetur magna.</div>
-    <div class="advantages-list__row">
-
-      <div class="advantages-list__item">
-        <div class="advantages-list__img advantages-list__img_secure"></div>
-        <h3 class="advantages-list__item-title">Secure Storage</h3>
-        <div class="advantages-list__text">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna.</div>
-      </div>
-
-      <div class="advantages-list__item">
-        <div class="advantages-list__img advantages-list__img_protect"></div>
-        <h3 class="advantages-list__item-title">Protected by Insurance</h3>
-        <div class="advantages-list__text">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna.</div>
-      </div>
-
-      <div class="advantages-list__item">
-        <div class="advantages-list__img advantages-list__img_industry"></div>
-        <h3 class="advantages-list__item-title">Industry best practices</h3>
-        <div class="advantages-list__text">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna.</div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <section class="get-started">
-    <div class="get-started__wrapper">
-      <div class="get-started__content">
-        <h2 class="get-started__title">Ready to get started?</h2>
-        <div class="get-started__text">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta.</div>
-        <button class="btn btn_white btn_get-started">get started</button>
-      </div>
-    </div>
-  </section>
 
 
   <footer class="site-footer">
