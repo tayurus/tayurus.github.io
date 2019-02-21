@@ -127,6 +127,11 @@
               notifications_none
 
             </i>
+                <i class="material-icons site-header__notifications-icon site-header__notifications-icon_md">
+
+              notifications
+
+            </i>
               </div>
               <div class="site-header__user-img" style='background: url(https://vokrug.tv/pic/news/0/0/2/c/002c1d1225e22c1ce26c93f0e33d7754.jpg) no-repeat center / cover;'></div>
             </div>
@@ -139,6 +144,410 @@
 
 
         </div>
+
+        <div class="row row_traiding">
+
+
+          <section class="trade-dashboard">
+            <h2 class="trade-dashboard__title">Trade Dashboard</h2>
+
+            <div class="trade-dashboard__tabs-row">
+              <div class="trade-dashboard__tab-title trade-dashboard__tab-title_active" data-tabTitle='buy'>BUY</div>
+              <div class="trade-dashboard__tab-title" data-tabTitle='sell'>SELL</div>
+            </div>
+
+            <!-- TAB 1 (BUY) -->
+
+            <div class="trade-dashboard__tab trade-dashboard__tab_active" data-tab='buy'>
+              <div class="trade-dashboard__window">
+
+                <div class="trade-dashboard__currencies-row">
+                  <div class="trade-dashboard__currency trade-dashboard__currency_active" data-currency='btc'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_btc"></div>
+                    <div class="trade-dashboard__currency-title">Bitcoin</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='eth'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_eth"></div>
+                    <div class="trade-dashboard__currency-title">Ethereum</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='ltc'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_ltc"></div>
+                    <div class="trade-dashboard__currency-title">Litecoin</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='xrp'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_xrp"></div>
+                    <div class="trade-dashboard__currency-title">Ripple</div>
+                  </div>
+                </div>
+
+                <div class="trade-dashboard__body">
+
+                  <div class="row row_trade-dashboard">
+
+                    <div class="trade-dashboard__input-wrapper trade-dashboard__input-wrapper_small">
+                      <div class="trade-dashboard__input-label">Amount</div>
+                      <button class="trade-dashboard__btn btn btn_input-trade-dashboard">MAX</button>
+                      <div class="trade-dashboard__input-row">
+                        <input type="text" class="input input_trade-dashboard" value="6000" />
+                        <div class="trade-dashboard__input-currency">GBP</div>
+                      </div>
+                    </div>
+
+                    <div class="trade-dashboard__icon trade-dashboard__icon_blue">
+                      <i class="material-icons">
+
+              arrow_forward
+
+            </i>
+                    </div>
+
+                    <div class="trade-dashboard__input-wrapper trade-dashboard__input-wrapper_small">
+                      <div class="trade-dashboard__input-label">You will recieve</div>
+                      <button class="trade-dashboard__btn btn btn_input-trade-dashboard">MAX</button>
+                      <div class="trade-dashboard__input-row">
+                        <input type="text" class="input input_trade-dashboard" value="0,004000" />
+                        <div class="trade-dashboard__input-currency" id='trade-dashboard__crypto-currency'>BTC</div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="trade-dashboard__input-wrapper">
+                    <div class="trade-dashboard__input-label">Payment Type</div>
+
+                    <div class="custom-select">
+
+                      <div class="custom-select__row">
+                        <div class="custom-select__selected-option">
+                          <div class="custom-select__option">
+                            <i class="material-icons custom-select__icon">
+
+          account_balance_wallet
+
+        </i>
+                            <div class="custom-select__option-text">Kobe94445 (GBP ACCOUNT)</div>
+                          </div>
+                        </div>
+
+                        <div class="custom-select__arrow">
+                          <i class="material-icons">
+
+        keyboard_arrow_down
+
+      </i>
+                        </div>
+
+                      </div>
+
+
+                      <div class="custom-select__options custom-select__options_hide">
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Kobe94445 (GBP ACCOUNT)</div>
+                        </div>
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Test (USD ACCOUNT)</div>
+                        </div>
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Another Test (EUR ACCOUNT)</div>
+                        </div>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <button class="btn btn_blue btn_full-width">CONFIRM</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2 (SELL) -->
+
+            <div class="trade-dashboard__tab" data-tab='sell'>
+              <div class="trade-dashboard__window">
+
+                <div class="trade-dashboard__currencies-row">
+                  <div class="trade-dashboard__currency trade-dashboard__currency_active" data-currency='btc'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_btc"></div>
+                    <div class="trade-dashboard__currency-title">Bitcoin</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='eth'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_eth"></div>
+                    <div class="trade-dashboard__currency-title">Ethereum</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='ltc'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_ltc"></div>
+                    <div class="trade-dashboard__currency-title">Litecoin</div>
+                  </div>
+
+                  <div class="trade-dashboard__currency" data-currency='xrp'>
+                    <div class="trade-dashboard__currency-img trade-dashboard__currency-img_xrp"></div>
+                    <div class="trade-dashboard__currency-title">Ripple</div>
+                  </div>
+                </div>
+
+                <div class="trade-dashboard__body">
+
+                  <div class="row row_trade-dashboard">
+
+                    <div class="trade-dashboard__input-wrapper trade-dashboard__input-wrapper_small">
+                      <div class="trade-dashboard__input-label">You will recieve</div>
+                      <button class="trade-dashboard__btn btn btn_input-trade-dashboard">MAX</button>
+                      <div class="trade-dashboard__input-row">
+                        <input type="text" class="input input_trade-dashboard" value="0,004000" />
+                        <div class="trade-dashboard__input-currency" id='trade-dashboard__crypto-currency'>BTC</div>
+                      </div>
+                    </div>
+
+                    <div class="trade-dashboard__icon trade-dashboard__icon_blue">
+                      <i class="material-icons">
+
+              arrow_forward
+
+            </i>
+                    </div>
+
+                    <div class="trade-dashboard__input-wrapper trade-dashboard__input-wrapper_small">
+                      <div class="trade-dashboard__input-label">Amount</div>
+                      <button class="trade-dashboard__btn btn btn_input-trade-dashboard">MAX</button>
+                      <div class="trade-dashboard__input-row">
+                        <input type="text" class="input input_trade-dashboard" value="6000" />
+                        <div class="trade-dashboard__input-currency">GBP</div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="trade-dashboard__input-wrapper">
+                    <div class="trade-dashboard__input-label">Payment Type</div>
+
+                    <div class="custom-select">
+
+                      <div class="custom-select__row">
+                        <div class="custom-select__selected-option">
+                          <div class="custom-select__option">
+                            <i class="material-icons custom-select__icon">
+
+          account_balance_wallet
+
+        </i>
+                            <div class="custom-select__option-text">Kobe94445 (GBP ACCOUNT)</div>
+                          </div>
+                        </div>
+
+                        <div class="custom-select__arrow">
+                          <i class="material-icons">
+
+        keyboard_arrow_down
+
+      </i>
+                        </div>
+
+                      </div>
+
+
+                      <div class="custom-select__options custom-select__options_hide">
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Kobe94445 (GBP ACCOUNT)</div>
+                        </div>
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Test (USD ACCOUNT)</div>
+                        </div>
+
+
+
+                        <div class="custom-select__option">
+                          <i class="material-icons custom-select__icon">
+
+        account_balance_wallet
+
+      </i>
+                          <div class="custom-select__option-text">Another Test (EUR ACCOUNT)</div>
+                        </div>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <button class="btn btn_blue btn_full-width">CONFIRM</button>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+          </section>
+
+          <section class="order-confirmation">
+            <h2 class="order-confirmation__title">Order Confirmation</h2>
+            <div class="order-confirmation__window">
+              <div class="order-confirmation__window-title">Trade Overview</div>
+
+              <div class="order-confirmation__field-wrapper">
+                <div class="order-confirmation__subtitle">Transaction Type</div>
+                <div class="order-confirmation__field">
+                  <div class="order-confirmation__icon order-confirmation__icon_large order-confirmation__icon_blue">
+                    <i class="material-icons">
+
+            account_balance_wallet
+
+          </i>
+                  </div>
+                  <div class="order-confirmation__field-text order-confirmation__field-text_large">Buying</div>
+                </div>
+              </div>
+
+              <div class="order-confirmation__field-wrapper">
+                <div class="order-confirmation__subtitle">Coin Type</div>
+                <div class="order-confirmation__field">
+                  <div class="order-confirmation__img order-confirmation__img_btc"></div>
+                  <div class="order-confirmation__field-text order-confirmation__field-text_large">Bitcoin</div>
+                </div>
+              </div>
+
+
+              <div class="row row_order-confirmation">
+
+                <div class="order-confirmation__field-wrapper">
+                  <div class="order-confirmation__subtitle">Amount (GBP)</div>
+                  <div class="order-confirmation__field order-confirmation__field_items-start">
+                    <div class="order-confirmation__field-text">6000</div>
+                    <div class="order-confirmation__field-text order-confirmation__field-text_gray">GBP</div>
+                  </div>
+                </div>
+
+                <div class="order-confirmation__icon order-confirmation__icon_large">
+                  <i class="material-icons">
+
+          arrow_forward
+
+        </i>
+                </div>
+
+                <div class="order-confirmation__field-wrapper">
+                  <div class="order-confirmation__subtitle">Amount</div>
+                  <div class="order-confirmation__field order-confirmation__field_items-start">
+                    <div class="order-confirmation__field-text">0.00546</div>
+                    <div class="order-confirmation__field-text order-confirmation__field-text_gray">BTC</div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="row row_order-confirmation">
+
+                <div class="order-confirmation__field-wrapper">
+                  <div class="order-confirmation__subtitle">Wallet</div>
+                  <div class="order-confirmation__field order-confirmation__field_items_bottom order-confirmation__field_items-start">
+                    <div class="order-confirmation__icon">
+                      <i class="material-icons">
+
+              account_balance_wallet
+
+            </i>
+                    </div>
+                    <div class="order-confirmation__field-text">Kobe94445</div>
+                  </div>
+                </div>
+
+                <div class="order-confirmation__icon order-confirmation__icon_large">
+                  <i class="material-icons">
+
+          link
+
+        </i>
+                </div>
+
+                <div class="order-confirmation__field-wrapper">
+                  <div class="order-confirmation__subtitle">Card</div>
+                  <div class="order-confirmation__field order-confirmation__field_items_bottom order-confirmation__field_items-start">
+                    <div class="order-confirmation__icon">
+                      <i class="material-icons">
+
+              credit_card
+
+            </i>
+                    </div>
+                    <div class="order-confirmation__field-text">458 ******** 4119</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="order-confirmation__field-wrapper order-confirmation__field-wrapper_mb_0">
+                <div class="order-confirmation__subtitle">Total Amount</div>
+                <div class="order-confirmation__field">
+                  <div class="order-confirmation__field-text order-confirmation__field-text_large">6025.00</div>
+                  <div class="order-confirmation__field-text order-confirmation__field-text_large order-confirmation__field-text_gray">GBP</div>
+                </div>
+              </div>
+
+              <div class="order-confirmation__note">
+                Service fee of 25.00GBP Included
+              </div>
+
+
+            </div>
+          </section>
+
+        </div>
+
+
 
       </div>
 
