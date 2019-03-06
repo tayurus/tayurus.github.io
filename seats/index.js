@@ -27,14 +27,13 @@ $(document).ready(function() {
     else {
       var reg = /[0-9]+\.?[0-9]?/i;
       currentSvgZoom = parseFloat(svg.getAttribute('transform').match(reg)[0]) - 0.5;
-      console.log(currentSvgZoom);
       svg.setAttribute("transform", "scale(" + currentSvgZoom + ")");
     }
   }
 
 
   hammertime.on("pinchin", zoomIn);
-  // hammertime.on("pinchout", zoomOut);
+  hammertime.on("pinchout", zoomOut);
 
 
 
