@@ -13,9 +13,14 @@ body {
 	font-size: 16px;
 	margin-bottom: 80px
 }
-a:fucus {
+a:focus {
   outline: 2px dotted #b6b4b1;
 }
+
+svg {
+  transition: transform .75s;
+}
+
 .container {
     max-width: 1370px;
 }
