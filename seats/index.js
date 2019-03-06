@@ -31,11 +31,13 @@ $(document).ready(function() {
     }
   }
 
-
-  hammertime.on("pinchin", zoomIn);
-  hammertime.on("pinchout", zoomOut);
-
-
+  hammertime.on("pinchin pinout", function(e) {
+    if (e.type === 'pinchin') {
+      zoomIn();
+    }else {
+      zoomOut();
+    }
+  });
 
   // $('#seatsModal').modal('show');
 });
