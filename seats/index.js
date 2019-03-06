@@ -1,9 +1,8 @@
 console.log("seat-select-start");
 $(document).ready(function() {
 
-  var wrapperSvg = document.querySelector('.wrapper');
   var svg = document.querySelector('svg');
-  var hammertime = new Hammer(wrapperSvg);
+  var hammertime = new Hammer(svg);
   hammertime.get('pinch').set({
     enable: true
   });
@@ -11,7 +10,6 @@ $(document).ready(function() {
   var currentSvgZoom = 1;
 
   function zoomIn() {
-    alert('pinchin!')
     if (!svg.getAttribute('transform')) {
       svg.setAttribute("transform", "scale(1.5)");
     }
