@@ -10,18 +10,19 @@ $(document).ready(function() {
   var currentSvgZoom = 1;
 
   function zoomIn() {
+    alert('pinchin!')
     if (!svg.getAttribute('transform')) {
       svg.setAttribute("transform", "scale(1)");
     }
     else {
       var reg = /[0-9]+\.?[0-9]?/i;
       currentSvgZoom = parseFloat(svg.getAttribute('transform').match(reg)[0]) + 0.5;
-      console.log(currentSvgZoom);
       svg.setAttribute("transform", "scale(" + currentSvgZoom + ")");
     }
   }
 
   function zoomOut() {
+    alert('pinchin!')
     if (!svg.getAttribute('transform')) {
       svg.setAttribute("transform", "scale(1)");
     }
