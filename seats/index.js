@@ -35,8 +35,8 @@ $(document).ready(function() {
   }
 
 
-  hammertime.on("tap", zoomIn);
-  // hammertime.on("pinchout", zoomOut);
+  hammertime.on("pinchin", zoomIn);
+  hammertime.on("pinchout", zoomOut);
 
 
 
