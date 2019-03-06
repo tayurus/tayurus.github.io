@@ -31,11 +31,11 @@ $(document).ready(function() {
     }
   }
 
-  hammertime.on("pinchin pinout", function(e) {
+  hammertime.on("pinchin pinchout", function(e) {
     if (e.type === 'pinchin') {
       zoomIn();
     }else {
-      zoomOut();
+      zoomOut()
     }
   });
 
