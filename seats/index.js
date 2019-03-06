@@ -1,8 +1,9 @@
 console.log("seat-select-start");
 $(document).ready(function() {
 
+  var wrapperSvg = document.querySelector('.wrapper');
   var svg = document.querySelector('svg');
-  var hammertime = new Hammer(svg);
+  var hammertime = new Hammer(wrapperSvg);
   hammertime.get('pinch').set({
     enable: true
   });
@@ -22,7 +23,6 @@ $(document).ready(function() {
   }
 
   function zoomOut() {
-    alert('pinchin!')
     if (!svg.getAttribute('transform')) {
       svg.setAttribute("transform", "scale(1)");
     }
@@ -35,8 +35,8 @@ $(document).ready(function() {
   }
 
 
-  hammertime.on("pinchin", zoomIn);
-  hammertime.on("pinchout", zoomOut);
+  hammertime.on("tap", zoomIn);
+  // hammertime.on("pinchout", zoomOut);
 
 
 
