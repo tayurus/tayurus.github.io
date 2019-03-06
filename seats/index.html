@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SEATS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    div.tooltip {
+      position: absolute;
+      text-align: center;
+      width: 60px;
+
+      padding: 2px;
+      font: 12px sans-serif;
+      background: lightsteelblue;
+      border: 0px;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .seat {
+      opacity: 0.6;
+    }
+
+    .seat:hover {
+      opacity: 1;
+    }
+
+    #seatsModal {
+      top: 25%;
+    }
+
+
+  </style>
+
+  <link rel="stylesheet" href="./css_ext/jquery-ui.min.css">
+  <link rel="stylesheet" href="./css_ext/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="./css_ext/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+
+  <style media="screen">
+    .ui-draggable-handle {
+      touch-action: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <table width="97%">
+
+    <tr style="height:20px;">
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="" align="center">
+
+        <input name="submitBtn" class="orderBtn" type="button" value="להזמנה" onclick="proceedSeatsBuy()" />
+
+      </td>
+    </tr>
+    <form id="sub_form" method="post" action="buy-seats.php">
+      <input type="hidden" id="s_data" name="s_data" />
+    </form>
+
+
+    <tr style="height:20px;">
+      <td></td>
+    </tr>
+
+
+  </table>
+
+
+
+  <div class="text-center" style="margin:10px;">
+  <div style="display: inline-block;cursor:pointer" id="map_plus" href="javascript:;"><i class="fa fa-search-plus fa-lg" aria-hidden="true"></i></div>&nbsp;&nbsp;&nbsp;&nbsp; <div style="display: inline-block;cursor:pointer" id="map_minus" href="javascript:;"><i class="fa fa-search-minus fa-lg" aria-hidden="true"></i></div>
+  </div>
+  <div id="picHolder" class="picHolder" style="width:90%; height:700px; border:1px solid #1a428a; overflow:hidden; margin:auto; direction:ltr;">
+
+  <div id="wrapper" class="wrapper" style=" margin:auto;"></div><br>
+  </div>
+  <div class="modal fade" id="seatsModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close pull-left"  data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <img src="images/logo.png" alt="logo" width="200" class="img-responsive" >
+        </div>
+        <div class="modal-body">
+          <p>
+          	לבחירת מקומות הישיבה מומלץ להיעזר בזכוכית המגדלת המופיעה מעל הבמה
+          </p>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <script src="./js_ext/d3.v3.min.js"> </script>
+  <script src="./js_ext/jquery-1.12.0.min.js"></script>
+  <script src="./js_ext/jquery-ui.min.js"></script>
+  <script src="./js_ext/resizeto.js"> </script>
+  <script src="./js_ext/jquery.ui.touch-punch.min.js"></script>
+  <script src="./js_ext/hammer.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
