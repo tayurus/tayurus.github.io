@@ -13,7 +13,7 @@ $(document).ready(function() {
   function zoomIn() {
     alert('pinchin!')
     if (!svg.getAttribute('transform')) {
-      svg.setAttribute("transform", "scale(1)");
+      svg.setAttribute("transform", "scale(1.5)");
     }
     else {
       var reg = /[0-9]+\.?[0-9]?/i;
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
 
   hammertime.on("pinchin", zoomIn);
-  hammertime.on("pinchout", zoomOut);
+  // hammertime.on("pinchout", zoomOut);
 
 
 
