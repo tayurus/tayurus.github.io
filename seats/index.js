@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
   // listen to events...
   hammertime.on("pinch", function(ev) {
-    alert(ev.type + " gesture detected.");
+    // alert(ev.type + " gesture detected.");
   })
 
     // $('#seatsModal').modal('show');
