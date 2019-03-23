@@ -3,8 +3,8 @@ const scrollerCenter = document.querySelector('.nav-panel__scroller-center');
 const scrollerLeft = document.querySelector('.nav-panel__scroller-left');
 const scrollerRight = document.querySelector('.nav-panel__scroller-right');
 
-const minScrollerWidth = 126;
-const minScrollerCenterWidth = minScrollerWidth - 26;
+var minScrollerWidth = (window.innerWidth / 4.5) - 26;
+var minScrollerCenterWidth = minScrollerWidth - 26;
 
 scroller.style.right = "0px";
 scroller.style.width = minScrollerWidth + "px";
