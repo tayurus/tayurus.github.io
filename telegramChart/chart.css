@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  transition: .15s;
+  transition-timing-function: linear;
+}
+
+polyline {
+  transition: .4s;
+}
+
+body {
+  margin: 0;
+}
+
+.chart {
+  height: calc(100vh - 172px);
+  background: #fff;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart__checkbox {
+  user-select: none;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.chart__checkbox-label {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.chart__checkbox-control {
+  display: none;
+}
+
+.chart__checkbox-control + .chart__checkbox-status {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-size: 0;
+  color: #fff;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.chart__checkbox-control:checked + .chart__checkbox-status {
+  font-size: 16px;
+}
+
+@media (max-width:767px) {
+  text {
+    font-size: 13px;
+  }
+}
