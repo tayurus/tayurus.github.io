@@ -1,0 +1,26 @@
+body {
+  background-color: var(--bg);
+}
+
+.text {
+  font-size: 50px;
+  padding: 50px;
+  color: var(--text);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px;
+  border: 1px solid tomato;
+  cursor: pointer;
+  margin: 10px;
+  background-color: var(--button-bg);
+}
+
+.button_active {
+  background-color: var(--button-bg);
+}

@@ -1,0 +1,6 @@
+:root[theme='dark'] {
+  --bg: black;
+  --text: #fff;
+  --button-bg: #fff;
+  --button-active-bg: limegreen;
+}

@@ -1,0 +1,6 @@
+:root[theme='light'] {
+  --bg: #ccc;
+  --text: black;
+  --button-bg: red;
+  --button-active-bg: navy;
+}
