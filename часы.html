@@ -1,0 +1,139 @@
+<html>
+<head>
+
+
+</head>
+<body>
+
+<canvas></canvas>
+
+<script>
+  const WIDTH = 500;
+  const HEIGHT = 500;
+  const RADIUS = WIDTH / 2 - 50;
+  const ARROW_HEIGHT = HEIGHT / 100;
+  const HALF_OF_CIRCLE = 180;
+
+  const canvas = document.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+
+
+
+  function drawHands() {
+
+
+    const now = new Date();
+
+    const currentMillisecond = now.getMilliseconds();
+    const currentSecond = now.getSeconds();
+    const currentMinute = now.getMinutes();
+    const currentHour = now.getHours();
+
+    const SECOND_HAND_ANGLE = ((currentSecond + currentMillisecond * 0.001) * 6 - HALF_OF_CIRCLE) * Math.PI / HALF_OF_CIRCLE;
+    const MINUTE_HAND_ANGLE = (currentMinute * 6 - HALF_OF_CIRCLE) * Math.PI / HALF_OF_CIRCLE;
+
+    // секундная
+    ctx.save();
+    ctx.translate(WIDTH / 2, HEIGHT / 2);
+    ctx.strokeStyle = 'red';
+    ctx.rotate(SECOND_HAND_ANGLE);
+    ctx.moveTo(0,0);
+    ctx.lineTo(0, RADIUS * 0.8);
+    ctx.stroke();
+    ctx.restore();
+
+    // минутная
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(WIDTH / 2, HEIGHT / 2);
+    ctx.lineWidth = 5;
+    ctx.rotate(MINUTE_HAND_ANGLE + SECOND_HAND_ANGLE / 60);
+    ctx.moveTo(0,0);
+    ctx.lineTo(0, RADIUS * 0.6);
+    ctx.stroke();
+    ctx.restore();
+
+    // часовая
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(WIDTH / 2, HEIGHT / 2);
+    ctx.lineWidth = 10;
+    ctx.rotate((currentHour * 30 - HALF_OF_CIRCLE + currentMinute / 2) * Math.PI / HALF_OF_CIRCLE);
+    ctx.moveTo(0,0);
+    ctx.lineTo(0, RADIUS * 0.6);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+    ctx.beginPath();
+    // окружность
+
+    ctx.arc(WIDTH / 2, HEIGHT / 2, RADIUS, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // рамка
+    ctx.beginPath();
+    ctx.arc(WIDTH / 2, HEIGHT / 2, (WIDTH / 2) - 40, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+
+    // числа
+    // идем по всем числам от 1 до 12 (i)
+    for (let i = 1; i <= 12; i++) {
+      // сохранить контекст
+      ctx.save();
+
+      // перемещаем точку отсчета в центр циферблата
+      ctx.translate(WIDTH / 2, HEIGHT / 2);
+
+      // рассчитываем текущий угол i * 30 * PI / 180
+      const angle = (i * 30) * Math.PI / 180;
+
+      // поворачиваем контекст на текущий угол
+      ctx.rotate(angle);
+
+      // перемещаем точку отсчета на границу циферблата
+      ctx.translate(0, -RADIUS * 0.9);
+
+      // перемещаем в 0 0
+      ctx.moveTo(0, 0);
+
+      // рисуем полосочку
+      ctx.textBaseline="middle";
+      ctx.textAlign="center"
+      ctx.font = "15px arial";
+      ctx.rotate(-angle);
+      ctx.fillText(i, 0, 0);
+
+      // восстанавливаем контекст
+      ctx.restore()
+    }
+
+
+    drawHands();
+
+    // центр часов
+    ctx.beginPath();
+    ctx.arc(WIDTH / 2, HEIGHT / 2, WIDTH / 30, 0, 2 * Math.PI);
+    ctx.fill();
+
+  }
+
+
+
+
+  // стрелочки
+  setInterval(draw, 50)
+
+
+</script>
+
+</body>
+</html>

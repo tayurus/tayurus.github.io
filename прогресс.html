@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>pathExample</title>
+    <meta charset='utf-8'/>
+</head>
+<body>
+<div style="display: flex">
+    <canvas id='example'></canvas>
+</div>
+
+
+<script>
+
+  function degreesToRadians(degrees) {
+    return degrees * (Math.PI / 180) - Math.PI / 2;
+  }
+
+  const drawProgress = (total, progress) => {
+    var example = document.getElementById('example'),
+      ctx = example.getContext('2d');
+    const HEIGHT = 480;
+    const WIDTH = 640;
+    const OFFSET = 5;
+    const CENTER_X = 190;
+    const CENTER_Y = 165;
+    const RADIUS = 35;
+    const EMPTY_COLOR = '#c7c7c7';
+    const FILLED_COLOR = 'tomato';
+    const ONE_SECTOR_ANGLE = (360 - (total * OFFSET)) / total;
+    example.height = HEIGHT;
+    example.width = WIDTH;
+    ctx.lineWidth = 15;
+    ctx.strokeStyle = EMPTY_COLOR;
+    for (let item = 0; item < total; item++) {
+      if (item < progress) {
+        ctx.strokeStyle = FILLED_COLOR;
+      } else {
+        ctx.strokeStyle = EMPTY_COLOR;
+      }
+      ctx.beginPath();
+      ctx.arc(CENTER_X, CENTER_Y, RADIUS, degreesToRadians((item * ONE_SECTOR_ANGLE) + (item > 0 ? item * OFFSET : 0)), degreesToRadians(ONE_SECTOR_ANGLE * item + ONE_SECTOR_ANGLE + (item > 0 ? item * OFFSET : 0)), false);
+      ctx.stroke();
+    }
+
+    ctx.stroke();
+  };
+
+  drawProgress(10,3);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<html>
+<head>
+
+
+  <style>
+      .content {
+        padding: 20px;
+        width: 670px;
+        height: 800px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      #canvas-main {
+        position: relative;
+        z-index: 1;
+      }
+
+      #canvas-text, #canvas-field, #canvas-score {
+          position: absolute;
+      }
+
+      #canvas-text {
+        z-index: 2;
+      }
+
+      #canvas-score {
+        z-index: 3;
+        background: #fff;
+        left: 0;
+      }
+
+  </style>
+</head>
+
+<body>
+<div class="content">
+  <canvas id="canvas-text"></canvas>
+  <canvas id="canvas-field"></canvas>
+  <canvas id="canvas-main"></canvas>
+  <canvas id="canvas-score"></canvas>
+</div>
+
+
+<script>
+
+  // ПЛАН НА TOMORROW
+  // Описать первые два урока: (теория, задание (текст пошагово))
+  // 1. Тема "Тег Canvas"
+  // 2. Тема "MoveTo, LineTo"
+
+  const SCORE_WIDTH = 30;
+  const WIDTH = 700;
+  const HEIGHT = 600;
+  const COMFORTABLE_SCORE_HEIGHT = 30;
+  const DISTANSE_BETWEEN_GROUPS = 80;
+  const DISTANSE_BETWEEN_COLUMNS = 5;
+  const SCROLL_DELTA = 30;
+  let SCROLL_X = 0;
+  let MAX_WIDTH = WIDTH;
+  const INPUT = {
+    'Math': [100, 36, 14],
+    'Russian language': [20, 33, 17],
+    'Geography': [33, 10, 10, 33], 'Jopa': [1000, 36, 14],
+    'Dalskiy language': [20, 33, 17],
+    'Po sopatke': [33, 10, 10, 33]
+  };
+
+  function getMaxScore(input) {
+    return Object.values(input).reduce((acc, it) => {
+      return Math.max(...it) > acc ? Math.max(...it) : acc;
+    }, 0);
+  }
+
+  function getComfortableScoreValue(fieldHeight, maxScore) {
+    let res = fieldHeight / maxScore;
+    while (res < COMFORTABLE_SCORE_HEIGHT) {
+      maxScore /= 2;
+      res = fieldHeight / maxScore;
+    }
+    return Math.ceil(maxScore);
+  }
+
+  function draw() {
+    const canvasMain = document.querySelector('#canvas-main');
+    const canvasText = document.querySelector('#canvas-text');
+    const canvasField = document.querySelector('#canvas-field');
+    const canvasScore = document.querySelector('#canvas-score');
+
+    const ctx = canvasMain.getContext('2d');
+    const ctxText = canvasText.getContext('2d');
+    const ctxField = canvasField.getContext('2d');
+    const ctxScore = canvasScore.getContext('2d');
+
+
+    canvasMain.width = WIDTH;
+    canvasMain.height = HEIGHT;
+
+    canvasText.width = WIDTH;
+    canvasText.height = HEIGHT;
+
+    canvasField.width = WIDTH;
+    canvasField.height = HEIGHT;
+
+    canvasScore.width = SCORE_WIDTH;
+    canvasScore.height = HEIGHT;
+
+    const COLUMN_WIDTH = 30;
+    const MAX_SCORE = getMaxScore(INPUT);
+    let RECTS = [];
+    let PREVIOUS_PAINTED_WIDTH = 0;
+
+    const OFFSET = HEIGHT / MAX_SCORE;
+
+    function drawScoreLines() {
+      const stepsCount = getComfortableScoreValue(HEIGHT, MAX_SCORE);
+      ctxField.beginPath();
+      ctxScore.beginPath();
+      ctx.translate(-SCROLL_X, 0)
+      ctxField.strokeStyle = '#cacaca';
+      ctxField.lineWidth = 1;
+      ctxScore.font = '16px serif';
+      for (let i = 0; i <= MAX_SCORE; i += Math.round(MAX_SCORE / stepsCount)) {
+        ctxField.moveTo(0, (HEIGHT - OFFSET * i));
+        ctxField.lineTo(MAX_WIDTH, (HEIGHT - OFFSET * i));
+        if (i !== 0) {
+          ctxScore.fillText(i, 0, (HEIGHT - OFFSET * i));
+        }
+
+      }
+
+      ctxField.moveTo(26, 0);
+      ctxField.lineTo(26, HEIGHT);
+      ctxField.stroke();
+    }
+
+    function drawGroup(group, index) {
+      const [subjectName, tries] = group;
+
+      const oldFillStyle = ctx.fillStyle;
+      const COLUMNS_COLORS = ['tomato', 'green', 'red', 'blue', 'purple'];
+
+      PREVIOUS_PAINTED_WIDTH += DISTANSE_BETWEEN_GROUPS;
+
+      let START_X = PREVIOUS_PAINTED_WIDTH;
+
+      // идем по столбцам группы
+      for (let column = 0; column < tries.length; column++) {
+        ctx.fillStyle = COLUMNS_COLORS[column];
+        ctx.strokeStyle = COLUMNS_COLORS[column];
+        // рисуем столбец
+        drawColumn(tries[column], START_X + (column * COLUMN_WIDTH) + (column * DISTANSE_BETWEEN_COLUMNS),
+          HEIGHT - (tries[column] * OFFSET), subjectName
+        );
+        PREVIOUS_PAINTED_WIDTH += COLUMN_WIDTH + (column === 0 ? 0 : DISTANSE_BETWEEN_COLUMNS);
+      }
+
+      ctx.fillStyle = oldFillStyle;
+
+    }
+
+    function drawColumn(value, x, y, subjectName) {
+      if (value === 0) {
+        return;
+      }
+      const oldValue = value;
+      value = MAX_SCORE - value;
+      ctx.beginPath();
+      ctx.rect(x, y, COLUMN_WIDTH, HEIGHT - value * OFFSET);
+      ctx.fill();
+      ctx.stroke();
+
+      const width = COLUMN_WIDTH;
+      const height = HEIGHT - value * OFFSET;
+
+      RECTS.push({
+        A: { x, y },
+        B: { x: x + width, y },
+        C: { x: x + width, y: y + height },
+        D: { x, y: y + height },
+        subjectName,
+        subjectValue: oldValue
+      });
+
+      MAX_WIDTH = x + width;
+
+    }
+
+    function isPointInsideRect(pointX, pointY, rect) {
+      // если x-координата точки больше x-координаты A и x-координата точки меньше x-координаты B
+      // И
+      // если y-координата точки больше y-координаты A и y-координата точки меньше y-координаты C
+      if (pointX > rect.A.x && pointX < rect.B.x && pointY > rect.A.y && pointY < rect.C.y) {
+        // точка внутри
+        return true;
+      }
+
+      // точка не внутри
+      return false;
+    }
+
+
+    canvasText.onmousewheel = (e) => {
+      if (e.deltaY > 0) {
+        if (SCROLL_X <= MAX_WIDTH - WIDTH) {
+          SCROLL_X = SCROLL_X + SCROLL_DELTA;
+        }
+
+      } else {
+        if (SCROLL_X > 0) {
+          SCROLL_X = SCROLL_X - SCROLL_DELTA;
+        }
+      }
+
+      draw();
+    }
+
+    canvasText.addEventListener('mousemove', e => {
+      const { offsetX, offsetY } = e;
+
+      ctxText.clearRect(0, 0, WIDTH, HEIGHT);
+      // если курсор попал на столбец графика, то
+      for (let rectIndex = 0; rectIndex < RECTS.length; rectIndex++) {
+        if (isPointInsideRect(offsetX + SCROLL_X, offsetY, RECTS[rectIndex])) {
+          // вывести текущие координаты
+          ctxText.beginPath();
+          ctxText.font = '30px Arial';
+          ctxText.fillStyle = '#cacaca';
+          const subjectName = RECTS[rectIndex].subjectName;
+          const subjectValue = RECTS[rectIndex].subjectValue;
+          const text = `${subjectName} - ${subjectValue}`;
+          const textWidth = ctxText.measureText(text).width;
+          const TOOLTIP_HEIGHT = 30;
+          let tooltipOffsetX = offsetX;
+          let tooltipOffsetY = offsetY - 25;
+          let textOffsetY = offsetY;
+          let textOffsetX = offsetX;
+
+          if (offsetY < TOOLTIP_HEIGHT) {
+            tooltipOffsetY += TOOLTIP_HEIGHT;
+            textOffsetY += TOOLTIP_HEIGHT;
+          }
+
+
+
+          if (WIDTH - offsetX < textWidth) {
+            tooltipOffsetX -= textWidth;
+            textOffsetX -= textWidth;
+          }
+
+          ctxText.rect(tooltipOffsetX, tooltipOffsetY, textWidth, TOOLTIP_HEIGHT);
+          ctxText.fillRect(tooltipOffsetX, tooltipOffsetY, textWidth, TOOLTIP_HEIGHT);
+          ctxText.fillStyle = 'red';
+          ctxText.fillText(text, textOffsetX, textOffsetY);
+          ctxText.stroke();
+          break;
+        }
+      }
+
+    });
+
+    // рисуем поле
+    drawScoreLines();
+
+    // идем по предметам
+    Object.entries(INPUT).forEach((subject, index) => {
+      // рисуем столбцы предмета
+      drawGroup(subject, index);
+    });
+
+    // drawColumn(4)
+
+
+    ctx.stroke();
+
+  }
+
+  draw();
+
+
+</script>
+
+</body>
+
+</html>

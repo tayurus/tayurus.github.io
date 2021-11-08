@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>pathExample</title>
+    <meta charset='utf-8'/>
+</head>
+<body>
+<div style="display: flex">
+    <canvas id='example'>Обновите браузер</canvas>
+    <img src="https://image.flaticon.com/icons/png/512/124/124621.png" alt="">
+
+</div>
+
+
+<script>
+  var example = document.getElementById('example'),
+    ctx = example.getContext('2d');
+  const HEIGHT = 480;
+  const WIDTH = 640;
+  example.height = HEIGHT;
+  example.width = WIDTH;
+  ctx.beginPath();
+  ctx.lineWidth = 15;
+  ctx.strokeStyle = 'tomato'
+  ctx.moveTo(10, HEIGHT - 10);
+  ctx.lineTo(20, HEIGHT - 100);
+  ctx.lineTo(130, HEIGHT - 250);
+  ctx.lineTo(130, HEIGHT - 100);
+  ctx.lineTo(10, HEIGHT - 10);
+
+  ctx.moveTo(130, HEIGHT - 250);
+  ctx.lineTo(130, HEIGHT - 380);
+  ctx.lineTo(180, 20);
+    // верхушечка
+  ctx.moveTo(200, 25);
+  ctx.arc(190,25,10,0,Math.PI,true);
+    // иллюминатор
+  ctx.moveTo(225,165);
+  ctx.arc(190,165,35,0,Math.PI * 2,true);
+
+  // палка над иллюминатором
+  ctx.moveTo(250, 100);
+  ctx.lineTo(130, 100);
+
+  // продолжение корпуса
+  ctx.moveTo(200, 20);
+  ctx.lineTo(250, HEIGHT - 380);
+  ctx.lineTo(250, HEIGHT - 250);
+  ctx.lineTo(250, HEIGHT - 100);
+  ctx.lineTo(240, HEIGHT - 70);
+  ctx.lineTo(140, HEIGHT - 70);
+  ctx.lineTo(130, HEIGHT - 100);
+
+  ctx.moveTo(130, HEIGHT - 150);
+  ctx.lineTo(250, HEIGHT - 150);
+
+  ctx.moveTo(190, HEIGHT - 240);
+  ctx.lineTo(190, HEIGHT - 10);
+
+  ctx.moveTo(150, HEIGHT - 70);
+  ctx.lineTo(150, HEIGHT - 40);
+  ctx.lineTo(230, HEIGHT - 40);
+  ctx.lineTo(230, HEIGHT - 70);
+
+  ctx.moveTo(350, HEIGHT - 10);
+  ctx.lineTo(340, HEIGHT - 100);
+  ctx.lineTo(250, HEIGHT - 250);
+  ctx.lineTo(250, HEIGHT - 100);
+  ctx.lineTo(350, HEIGHT - 10);
+
+  // ctx.moveTo(40, 140);
+  // ctx.lineTo(20, 40);
+  // ctx.lineTo(60, 100);
+  // ctx.lineTo(80, 20);
+  // ctx.lineTo(100, 100);
+  // ctx.lineTo(140, 40);
+  // ctx.lineTo(120, 140);
+  ctx.stroke(); // *22
+</script>
+</body>
+</html>

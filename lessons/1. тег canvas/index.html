@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<canvas id="canvas"></canvas>
+
+<script>
+  const canvas = document.querySelector('#canvas');
+  const ctx = canvas.getContext('2d');
+
+
+  ctx.beginPath();
+
+  ctx.fillStyle = 'tomato';
+  ctx.arc(55, 55, 50, 0, 2 * Math.PI, false);
+  ctx.fill();
+
+  ctx.beginPath();
+
+  ctx.fillStyle = 'limegreen';
+  ctx.rect(125,50,50, 25);
+  ctx.fill();
+
+
+
+
+</script>
+</body>
+</html>
